@@ -1,0 +1,802 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ 
+<html>
+<head>
+<title>Standards - Category 1 - MT 102 STP Checklist</title>
+<link href="mark.css" type="text/css" rel="stylesheet">
+<meta http-equiv="Content-Language" content="EN_UK">
+<meta name="Creator" content="S.W.I.F.T. User Documentation">
+<meta name="Date.Issued" content="22 December 2017">
+<meta name="Description" content="Standards, Standards MT, November 2018, Category 1, Message Reference Guide, Standards Release Guide, MT 102 STP Checklist">
+<meta name="Format" content="HTML">
+<meta name="Identifier" content="MTSTPChecklist">
+<meta name="Keywords" content="SWIFT, Standards, Standards MT, Category 1, Customer Payments and Cheques">
+<meta name="Language" content="EN_UK">
+<meta name="Publisher" content="S.W.I.F.T. SCRL">
+<meta name="Relation.IsPartOf" content="Standards - Category 1">
+<meta name="Rights" content="Copyright (c) S.W.I.F.T. SCRL('SWIFT'), avenue Adele 1, B-1310 La Hulpe, Belgium. 22 December 2017. All rights reserved.">
+<meta name="Subject" content="MT 102 STP Checklist">
+<meta name="Type" content="Checklist">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var selftitle  = "MT 102 STP Checklist" ;
+// --></script>
+<meta name="bookid" content="cat1">
+<meta name="productfamily" content="Standards">
+<meta name="productname" content="Standards MT">
+<meta name="productrelease" content="November 2018">
+<meta name="subproductname" content="Category 1 - Customer Payments and Cheques">
+<meta name="subproductrelease" content="">
+<meta name="Book.Context" content="MT STP">
+<meta name="Book.Product" content="Category 1 - Customer Payments and Cheques for Standards MT November 2018">
+<meta name="Book.Title" content="Message Reference Guide - Standards Release Guide">
+<meta name="informationtypes" content="Standards">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var contextStr  = "MT 102 STP Checklist" ;
+// --></script>
+<meta http-equiv="Content-Type" content="text/html; CHARSET=ISO-8859-1">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var imgCursorOn  = new Image() ;     // the image to show when the cursor is on
+imgCursorOn.src  = 'CURSOR1.GIF';
+var imgCursorOff = new Image() ;     // the image to show when the cursor is off
+imgCursorOff.src = 'CURSOR0.GIF' ;
+function refreshRev() {
+   if (parent!=self && parent.parent != parent.self && parent.parent.frames.length==2 && parent.parent.frames[1]==parent) {
+      if (parent.parent.frames[0].frames.length==0) {
+         if (parent.parent.frames[0].revMax!=null) {
+            parent.parent.frames[0].refreshRevCursor();
+         }
+      }
+      else {
+         if (parent.parent.frames[0].frames.length==2) {
+            if (parent.parent.frames[0].frames[1].revMax!=null) {
+               parent.parent.frames[0].frames[1].refreshRevCursor();
+            }
+         }
+      }
+   }
+}
+// end-of-script --></script>
+<link href="swiftuhb.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/JavaScript" src="uhbdoc.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+var toptitle="Standards - Category 1";
+var linkself="ahg.htm";
+var linkparent="";
+var leaf=true;
+var linkleft="ahf029.htm";
+var linkup="";
+var linkright="aia.htm";
+var linktop="title.htm";
+
+function onLoadUhbDoc() {
+   resyncUhb();
+   refreshRev(); 
+}
+//-->
+</script>
+</head>
+<body onload="onLoadUhbDoc();" class="BOOK"><div class="noprint"><div class="showhidetoc"><a href="javascript:showHideToc();"><img src="hidetoc.gif" name="showhidetoc" alt="Show/Hide TOC"></a></div></div>
+<span class="noprint"><a name="c0"></a>
+</span>
+<a name="genahg"></a>
+<div class="noprint"><a name="top"></a>
+</div>
+
+
+
+<h2>MT 102 STP Checklist</h2>
+
+
+<p>This document provides a checklist which is strongly recommended to be used by financial institutions as a basis for setting up bilateral or multilateral agreements for the processing of crossborder customer payments, that is, Credit Transfers transmitted by MT 102 STP via FIN.
+</p>
+<p>It is recommended that all items listed be covered in the bilateral or multilateral agreements. In order to further facilitate the set up of these agreements, common procedures have been defined which financial institutions, if they wish, may override.
+</p>
+<p>The checklist is not intended to provide an exhaustive list of items nor does SWIFT claim any responsibility for it.
+</p>
+<a name="genahge"></a>
+
+
+<h3>Currencies Accepted, their Transaction Amount Limit and Settlement</h3>
+
+<a name="genahgeb"></a>
+
+
+<h4>Currencies Accepted</h4>
+
+
+<p>Unless otherwise agreed, multiple payment transactions are either expressed in the currency of the sending or the receiving country. If financial institutions wish to accept third currencies this should be bilaterally agreed.
+</p>
+<a name="genahgec"></a>
+
+
+<h4>Transaction Amount Limit</h4>
+
+
+<p>If financial institutions agree to define amount limits to the individual transactions, they should specify them per currency.
+</p>
+<p>If the agreement allows for transactions above amounts to which specific requirements apply, for example, regulatory reporting requirements, these requirements and their formatting should be specified as well in the agreement.
+</p>
+<a name="genahged"></a>
+
+
+<h4>Settlement</h4>
+
+
+<p>Unless otherwise agreed, direct account relationship between the Sender and the Receiver will be used for the booking of the transactions exchanged. However if they wish, financial institutions may also bilaterally agree to include third reimbursement parties in the settlement.
+</p>
+<p>Whatever the agreement, transactions contained in a same message will be booked in one single entry.
+</p>
+<p>For each currency accepted, the amount limit, the account number(s) used for settlement, if other than the normal one(s), and/or the third reimbursement party(ies) involved, if any, can be indicated in the chart below:
+</p>
+<table width="98%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Currencies accepted</th>
+
+<th align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Transaction amount limit</th>
+
+<th align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Settlement account</th>
+
+<th align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Third reimbursement institutions(s) if any</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<a name="genahgf"></a>
+
+
+<h3>Charges</h3>
+
+<a name="genahgfb"></a>
+
+
+<h4>Charging Options and Amounts</h4>
+
+
+<p>Unless otherwise agreed, financial institutions will accept the charging options as defined and allowed for in the MT 102 STP. If financial institutions wish to accept only one option, this should be bilaterally agreed.
+</p>
+<p>Financial institutions which accept the OUR option should agree on and specify the transaction charges in the receiving country for 'on us' and if applicable 'not on us' payments.
+</p>
+<p>These transaction charges can be an exact amount or formula (percentage) and cover the guarantee and processing of transactions which the Receiver provides to the Sender until the execution in the receiving country up to the posting to the beneficiary's account. The pricing of bank-customer services, for example, for the method of advice - for daily/weekly/monthly statement for instance, being different from institution to institution are considered not to be part of the charges.
+</p>
+<table width="98%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Charges due to:</th>
+
+<th align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Type of payment: on us/not on us</th>
+
+<th align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Charges per message: formula or exact amount</th>
+
+<th align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Charges per transaction: formula or exact amount</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p>The above charges are preferably set for each trimester, if necessary semester. Changes to these charges should be announced one month before the end of the term.
+</p>
+<p>The messages sent as from that implementation date, will be subject to the new tariffs of the Receiver.
+</p>
+<a name="genahgfc"></a>
+
+
+<h4>Charges Specifications in the MT 102 STP</h4>
+
+
+<p>Unless otherwise agreed, the pre-agreed charges will be included in the MTs 102 STP exchanged, as appropriate, for information and control purposes and this in a consistent manner.
+</p>
+<p>Unless otherwise agreed, charges will always be expressed in the same currency as the transaction amount(s) and settlement amount of the message.
+</p>
+<p>In case the charges amounts, due to the above rule, are quoted in a currency different to the one specified in the bilateral agreement, the exchange rate should be quoted in the message exchanged.
+</p>
+<a name="genahgfd"></a>
+
+
+<h4>Settlement Procedure for Charges</h4>
+
+
+<p>Unless otherwise agreed, financial institutions will separately indicate in the MT 102 STP the sum of charges due to the Sender and/or to the Receiver, as appropriate.
+</p>
+<p>The amount settled between financial institutions with the value date specified includes at a minimum the sum of all transaction amounts. Whether the sum of charges due to the Sender and/or Receiver will also be included in the settlement amount, will depend on the agreed settlement procedure for charges. Regarding this procedure, financial institutions can agree that:
+</p>
+<table width="98%" border="1" cellpadding="5">
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Charges are settled with same value date as the sum of all transaction amounts and booked together</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Charges are settled with same value date as the sum of all transaction amounts but booked separately</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Charges are settled periodically (once ...)</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Other</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p>Only when using the first or second option, the settlement amount will include the sum of charges.
+</p>
+<a name="genahgg"></a>
+
+
+<h3>Data Transmission and Bulking Criteria</h3>
+
+
+<p class="stem">Unless otherwise agreed, credit transfer transactions contained in the same MT 102 STP should be grouped as follows:
+</p>
+
+<ul>
+<li>
+<p>operations with same bank operation code
+</p></li>
+
+<li>
+<p>operations in same currency
+</p></li>
+
+<li>
+<p>operations with same settlement account/institution
+</p></li>
+
+<li>
+<p>operations with same value date
+</p></li>
+
+</ul>
+
+
+<p>Financial institutions should agree whether only head office or also branches can be the Sender and/or Receiver of the MT 102 STP:
+</p>
+<table width="98%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</th>
+
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">BIC Bank1</th>
+
+<th align="CENTER" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">BIC Bank2</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Only head-office</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Head office and all domestic branches</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Head office and a limited number of domestic branches as listed: only list party suffix and branch identifier</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<a name="genahgh"></a>
+
+
+<h3>Date and Time Frames</h3>
+
+
+<p>Financial institutions should agree on the timeframe needed by the Receiver to execute the payments accepted in its country. This timeframe starts counting as of an agreed cut-off time for receipt of incoming messages by the Receiver.
+</p>
+<p>Messages received before cut-off time, will be settled on a pre-agreed day which is a (number of) day(s) following the day of receipt (day of receipt = D). For messages received after cut-off time, the settlement timeframe will be based on D+1.
+</p>
+<p>D will also be the basis for calculating the execution dates (dates when the funds are available to the Beneficiary).
+</p>
+<p>Date of receipt/acceptance = D
+</p>
+<table width="98%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</th>
+
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Currency 1</th>
+
+<th align="CENTER" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Currency 2</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Receiver's cut-off time</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Settlement timeframe</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">D (+)</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">D (+)</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Execution timeframe for on/us payments (until funds are on the account of the Beneficiary)</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">D (+)</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">D (+)</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Execution timeframe for not on/us payments (until funds are on the account of Beneficiary)</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">D (+)</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">D (+)</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<a name="genahgi"></a>
+
+
+<h3>Level of Controls/Checks and Acceptance of Messages/Transactions</h3>
+
+<a name="genahgib"></a>
+
+
+<h4>Message Level</h4>
+
+
+<p>Unless otherwise agreed, financial institutions will take as a basis for their controls/checks all security aspects of FIN as defined in the SWIFT FIN User Handbook as well as the MT 102 STP message syntax and semantics as defined in the MT 102 STP message specifications.
+</p>
+<p>In order to achieve straight-through processing of the MTs 102 STP exchanged, financial institutions should define checks and controls relating to the bilaterally agreed items.
+</p>
+<p>Unless otherwise agreed, messages passing the checks and controls, are considered accepted and therefore irrevocable, that is, to be posted to the nostro/loro account.
+</p>
+<p>If messages do not pass the checks/controls, they will be rejected (see the next checkpoint).
+</p>
+<p>Proposed checks and controls, relating to the bilaterally agreed items, performed by the Receiver and their error codes:
+</p>
+<table width="98%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Control/Check</th>
+
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes/No</th>
+
+<th align="CENTER" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Error Code</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Settlement amount</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Value date</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sender</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Currencies present</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Bulking criteria used</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Information present in field 72</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Bank operation code</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Other</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<a name="genahgic"></a>
+
+
+<h4>Transaction Level</h4>
+
+
+<p>Once the message is accepted, further checks are proposed to take place at transaction level. Only if transaction(s) pass the checks, will they be executed. If not, they will be rejected (see the next checkpoint).
+</p>
+<p>Proposed checks and controls performed by the Receiver including error codes prior to the execution of the transactions:
+</p>
+<table width="98%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Control/Check</th>
+
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes/No</th>
+
+<th align="CENTER" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Error Code</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Account number of beneficiary</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Transaction amount</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Beneficiary bank identification</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Length of remittance data</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Other</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<a name="genahgj"></a>
+
+
+<h3>Rejects of Messages and/or Transactions</h3>
+
+<a name="genahgjb"></a>
+
+
+<h4>Message Rejects</h4>
+
+
+<p>For rejects due to a communication failure between the Sender and the Receiver, the existing FIN rules apply.
+</p>
+<p>Unless otherwise agreed, messages properly received but failing to pass the message level checks (as defined in the previous checkpoint) will be rejected by the Receiver without further processing. Financial institutions are recommended to use the MT 195 to advise the rejection. The reject advice should contain at a minimum the reference of the rejected message and the error code(s). The maximum delay acceptable for the Receiver to notify the Sender and possible related charges should be bilaterally agreed.
+</p>
+<p>Unless otherwise agreed, the notification returned to the Sender will exempt the Receiver from processing the message. The Sender will, after correction, resubmit the message.
+</p>
+<a name="genahgjc"></a>
+
+
+<h4>Transaction Rejects</h4>
+
+
+<p class="stem">The return to the originator of transactions being rejected after the message which contained them has been posted to a nostro/loro account (between the Sender and the Receiver), will cause a settlement. Unless otherwise agreed, this settlement will adhere to the following rules:
+</p>
+
+<ul>
+<li>
+<p>it should be in the same currency as the original transaction currency
+</p></li>
+
+<li>
+<p>it should take place at a bilaterally agreed value date
+</p></li>
+
+<li>
+<p>the original transaction amount should remain unchanged
+</p></li>
+
+<li>
+<p>the settlement should take place via the same account relationship
+</p></li>
+
+<li>
+<p>normal banking practice prevails.
+</p></li>
+
+</ul>
+
+
+<p>Financial institutions should agree on a maximum of working days after receipt of the MT 102 for rejecting a transaction and on the charges applied.
+</p>
+<p>The following chart provides details regarding the message/transaction rejects:
+</p>
+<table width="98%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</th>
+
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Reject of message</th>
+
+<th align="CENTER" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Reject of transaction</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Maximum delay as from moment of receipt to advise the reject to Sender</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Charges due to the reject</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<a name="genahgla"></a>
+
+
+<h3>Cancellations</h3>
+
+
+<p>Unless otherwise agreed, messages properly received and accepted are to be considered as irrevocable. Cancellation therefore should be the exception.
+</p>
+<p>If however cancellations are accepted in the bilateral agreement, the following details should be agreed:
+</p>
+<table width="98%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</th>
+
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">BIC of Bank1</th>
+
+<th align="CENTER" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">BIC of Bank2</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Acceptable delay for the Sender to request cancellation of message</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Acceptable delay for acceptance and response by the Receiver to such request</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Charges due to the Receiver of such request</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p>Financial institutions are proposed to send their request for cancellation by MT 192, for response by MT 196.
+</p>
+<p>The possible interbank costs of the failure are supported by the Sender.
+</p>
+<a name="genahglb"></a>
+
+
+<h3>Modifications and Changes</h3>
+
+
+<p>Unless otherwise agreed, financial institutions will use the most up-to-date version of the MT 102 STP for the transmission of their transactions.
+</p>
+<p>Unless otherwise agreed, financial institutions will implement changes in the message specifications of the MT 102 STP according to the implementation dates as announced by SWIFT
+</p>
+<p>A Sender who has not done the necessary modifications in time may not be able to correctly format the transactions concerned. In this case, the Receiver is not obliged to execute the transactions. Financial institutions should agree who is liable for any costs arising from the non-execution of these transactions. Unless otherwise agreed, the costs are to be supported by the Sender.
+</p>
+<p>A Receiver who has not done the necessary modifications in time may not be able to process the transactions. The Receiver will remain responsible for executing the transactions. Financial institutions should agree who is liable for any costs arising from the non-execution of these transactions. Unless otherwise agreed, the costs are to be supported by the Receiver.
+</p>
+<div class="noprint">
+<p class="footer" align="CENTER"><a href="ahf029.htm"><img src="pgback.gif" alt="Previous Page"></a>&nbsp;
+<a href="#top"><img src="pgtop.gif" alt="Top Of Page"></a>&nbsp;
+<a href="aia.htm"><img src="pgnext.gif" alt="Next Page"></a> 
+</p>
+</div>
+
+<a name="page-break"></a>
+</body>
+</html>
+

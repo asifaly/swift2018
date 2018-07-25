@@ -1,0 +1,2580 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ 
+<html>
+<head>
+<title>Standards - Category 3 - MT&#160;306 Format Specifications</title>
+<link href="mark.css" type="text/css" rel="stylesheet">
+<meta http-equiv="Content-Language" content="EN_UK">
+<meta name="Creator" content="S.W.I.F.T. User Documentation">
+<meta name="Date.Issued" content="22 December 2017">
+<meta name="Description" content="Standards, Standards MT, November 2018, Category 3, Message Reference Guide: Volume 1 (MT 300 - MT 341), Standards Release Guide, MT 306 Format Specifications">
+<meta name="Format" content="HTML">
+<meta name="Identifier" content="MT306FormatSpec">
+<meta name="Keywords" content="SWIFT, Standards, Standards MT, Category 3, Treasury Markets - Foreign Exchange, Money Markets and Derivatives">
+<meta name="Language" content="EN_UK">
+<meta name="Publisher" content="S.W.I.F.T. SCRL">
+<meta name="Relation.IsPartOf" content="Standards - Category 3 - Volume 1">
+<meta name="Rights" content="Copyright (c) S.W.I.F.T. SCRL('SWIFT'), avenue Adele 1, B-1310 La Hulpe, Belgium. 22 December 2017. All rights reserved.">
+<meta name="Subject" content="MT 306 Format Specifications">
+<meta name="Type" content="FormatSpec">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var selftitle  = "MT 306 Format Specifications" ;
+// --></script>
+<meta name="bookid" content="cat3v1">
+<meta name="productfamily" content="Standards">
+<meta name="productname" content="Standards MT">
+<meta name="productrelease" content="November 2018">
+<meta name="subproductname" content="Category 3 - Treasury Markets - Foreign Exchange, Money Markets and Derivatives">
+<meta name="subproductrelease" content="">
+<meta name="Book.Context" content="MT 306">
+<meta name="Book.Product" content="Category 3 - Treasury Markets - Foreign Exchange, Money Markets and Derivatives for Standards MT November 2018">
+<meta name="Book.Title" content="Message Reference Guide: Volume 1 (MT 300 - MT 341) - Standards Release Guide">
+<meta name="informationtypes" content="Standards">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var contextStr  = "MT 306 Format Specifications" ;
+// --></script>
+<meta http-equiv="Content-Type" content="text/html; CHARSET=ISO-8859-1">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var imgCursorOn  = new Image() ;     // the image to show when the cursor is on
+imgCursorOn.src  = 'CURSOR1.GIF';
+var imgCursorOff = new Image() ;     // the image to show when the cursor is off
+imgCursorOff.src = 'CURSOR0.GIF' ;
+function refreshRev() {
+   if (parent!=self && parent.parent != parent.self && parent.parent.frames.length==2 && parent.parent.frames[1]==parent) {
+      if (parent.parent.frames[0].frames.length==0) {
+         if (parent.parent.frames[0].revMax!=null) {
+            parent.parent.frames[0].refreshRevCursor();
+         }
+      }
+      else {
+         if (parent.parent.frames[0].frames.length==2) {
+            if (parent.parent.frames[0].frames[1].revMax!=null) {
+               parent.parent.frames[0].frames[1].refreshRevCursor();
+            }
+         }
+      }
+   }
+}
+// end-of-script --></script>
+<link href="swiftuhb.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/JavaScript" src="uhbdoc.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+var toptitle="Standards - Category 3 - Volume 1";
+var linkself="aic.htm";
+var linkparent="";
+var leaf=true;
+var linkleft="aib.htm";
+var linkup="";
+var linkright="aid.htm";
+var linktop="title.htm";
+
+function onLoadUhbDoc() {
+   resyncUhb();
+   refreshRev(); 
+}
+//-->
+</script>
+</head>
+<body onload="onLoadUhbDoc();" class="BOOK"><div class="noprint"><div class="showhidetoc"><a href="javascript:showHideToc();"><img src="hidetoc.gif" name="showhidetoc" alt="Show/Hide TOC"></a></div></div>
+<span class="noprint"><a name="c0"></a>
+</span>
+<a name="genaic"></a>
+<div class="noprint"><a name="top"></a>
+</div>
+
+
+
+<h2>MT&nbsp;306 Format Specifications</h2>
+
+
+<p class="stem">The MT 306 consists of thirteen sequences:
+</p>
+
+<ul>
+<li>
+<p>Sequence A General Information contains general information about the option as well as about the confirmation itself
+</p></li>
+
+<li>
+<p>Sequence B Transaction Details contains information about the transaction
+</p></li>
+
+<li>
+<p>Sequence C Settlement Instructions for Payment of Premium provides the instructions for the payment of the premium
+</p></li>
+
+<li>
+<p>Sequence D Vanilla Block provides the specific deal details for vanilla options
+</p></li>
+
+<li>
+<p>Sequence E Payout Amount contains information about the payout amount for non-vanilla options
+</p></li>
+
+<li>
+<p>Sequence F Barrier Block provides the barrier information
+</p></li>
+
+<li>
+<p>Sequence G Trigger Block contains information about the trigger(s) for non-vanilla options
+</p></li>
+
+<li>
+<p>Sequence H Non Deliverable Option Block provides specific details for the non-deliverable options
+</p></li>
+
+<li>
+<p>Sequence I Early Termination specifies the details for the early termination of an option.
+</p></li>
+
+<li>
+<p>Sequence J Averaging Options and Forwards specifies the details for averaging options and averaging forwards.
+</p></li>
+
+<li>
+<p>Sequence K Additional Information provides information, which is not match-critical.
+</p></li>
+
+<li>
+<p>Sequence L Additional Amounts specifies the different fees, which may be associated with the events occurring during the life of the option, for example a close-out.
+</p></li>
+
+<li>
+<p>Sequence M Reporting Information provides transaction information that must be reported to a trade repository. This sequence is optional and is only to be used for reporting to trade repositories, although some fields, for example, unique transaction identifier and prior unique transaction identifier, might be used on regular confirmations.
+</p></li>
+
+</ul>
+
+
+<table class="formatspec" width="98%" border="1" cellpadding="5"><caption align="LEFT"><b>MT&nbsp;306 Foreign Currency Option Confirmation</b></caption>
+
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Status</th>
+
+<th align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Tag</th>
+
+<th align="CENTER" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Field Name</th>
+
+<th align="CENTER" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Content/Options</th>
+
+<th align="CENTER" valign="TOP" width="7%"><i><img src="cursor0.gif" alt="" name="space" height="10" width="10">No.</i></th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory Sequence A General Information</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig001.htm#mt306-1-field-15a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>1</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">20</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sender's Reference</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig002.htm#mt306-2-field-20"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>2</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">21</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Related Reference</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig003.htm#mt306-3-field-21"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>3</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Type of Operation</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig004.htm#mt306-4-field-22a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>4</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">94A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Scope of Operation</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig005.htm#mt306-5-field-94a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>5</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22C</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Common Reference</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!a2!c4!n4!a2!c</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig006.htm#mt306-6-field-22c"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>6</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">21N</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Contract Number Party A</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig007.htm#mt306-7-field-21n"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>7</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">21B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Contract Number Party B</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig008.htm#mt306-8-field-21b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>8</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">12F</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Option Style</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig009.htm#mt306-9-field-12f"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>9</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">12E</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Expiration Style</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig010.htm#mt306-10-field-12e"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>10</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">12D</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Option Type</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig011.htm#mt306-11-field-12d"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>11</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">17A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Barrier Indicator</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig012.htm#mt306-12-field-17a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>12</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">17F</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Non-Deliverable Indicator</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig013.htm#mt306-13-field-17f"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>13</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22K</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Type of Event</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c[/35x]</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig014.htm#mt306-14-field-22k"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>14</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30U</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Date of Trigger Hit</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig015.htm#mt306-15-field-30u"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>15</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">29H</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Location of Trigger Hit</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig016.htm#mt306-16-field-29h"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>16</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">82a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Party A</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig017.htm#mt306-17-field-82a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>17</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">87a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Party B</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig018.htm#mt306-18-field-87a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>18</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">83a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Fund or Beneficiary Customer</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig019.htm#mt306-19-field-83a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>19</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">77H</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Type, Date, Version of the Agreement</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">6a[/8!n][//4!n]</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig020.htm#mt306-20-field-77h"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>20</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">77D</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Additional Conditions</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">6*35x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig021.htm#mt306-21-field-77d"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>21</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">14C</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Year of Definitions</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig022.htm#mt306-22-field-14c"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>22</i></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence A General Information</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory Sequence B Transaction Details</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig023.htm#mt306-23-field-15b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>23</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">17V</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Buy (Sell) Indicator</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig024.htm#mt306-24-field-17v"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>24</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30T</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Trade Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig025.htm#mt306-25-field-30t"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>25</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30X</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Expiration Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig026.htm#mt306-26-field-30x"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>26</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">29E</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Expiration Location and Time</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c/4!n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig027.htm#mt306-27-field-29e"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>27</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Final Settlement Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">F or J</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig028.htm#mt306-28-field-30a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>28</i></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----> </b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">14S</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Settlement Rate Source</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a2n[/4!n/4!c]</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aig029.htm#mt306-29-field-14s"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>29</i></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----| </b></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="CENTER" valign="TOP" width="10%"><ins><span id="ES12651.0000.0000" class="inserted"><a name="c1"><img src="cursor0.gif" alt="" name="imgC1" height="10" width="10"></a>O</span></ins>
+</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="6%"><ins><span id="ES12651.0003.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">39M</span></ins>
+</td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="48%"><ins><span id="ES12651.0006.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Payment Clearing Centre</span></ins>
+</td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="29%"><ins><span id="ES12651.0009.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">2!a</span></ins>
+</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig030.htm#mt306-30-field-39m"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><ins><span id="ES12651.0012.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>30</i></span></ins>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Subsequence B1 Premium Details</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">37K</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Premium Price</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a12d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig031.htm#mt306-31-field-37k"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20223.0000" class="inserted"><i><a name="c2"><img src="cursor0.gif" alt="" name="imgC2" height="10" width="10"></a>31</i></span></ins>
+<del><span id="ES20220.0000" class="deleted"><i>30</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30V</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Premium Payment Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig032.htm#mt306-32-field-30v"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20253.0000" class="inserted"><i><a name="c3"><img src="cursor0.gif" alt="" name="imgC3" height="10" width="10"></a>32</i></span></ins>
+<del><span id="ES20250.0000" class="deleted"><i>31</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">34B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Premium Currency and Amount</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a15d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig033.htm#mt306-33-field-34b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20284.0000" class="inserted"><i><a name="c4"><img src="cursor0.gif" alt="" name="imgC4" height="10" width="10"></a>33</i></span></ins>
+<del><span id="ES20281.0000" class="deleted"><i>32</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Subsequence B1 Premium Details</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory Subsequence B2 Calculation Agent</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">84a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Calculation Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, B, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig034.htm#mt306-34-field-84a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20315.0000" class="inserted"><i><a name="c5"><img src="cursor0.gif" alt="" name="imgC5" height="10" width="10"></a>34</i></span></ins>
+<del><span id="ES20312.0000" class="deleted"><i>33</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Subsequence B2 Calculation Agent</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence B Transaction Details</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence C Settlement Instructions for Payment of Premium</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15C</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig035.htm#mt306-35-field-15c"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20357.0000" class="inserted"><i><a name="c6"><img src="cursor0.gif" alt="" name="imgC6" height="10" width="10"></a>35</i></span></ins>
+<del><span id="ES20354.0000" class="deleted"><i>34</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">53a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Delivery Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig036.htm#mt306-36-field-53a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20390.0000" class="inserted"><i><a name="c7"><img src="cursor0.gif" alt="" name="imgC7" height="10" width="10"></a>36</i></span></ins>
+<del><span id="ES20387.0000" class="deleted"><i>35</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">86a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary 2</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig037.htm#mt306-37-field-86a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20423.0000" class="inserted"><i><a name="c8"><img src="cursor0.gif" alt="" name="imgC8" height="10" width="10"></a>37</i></span></ins>
+<del><span id="ES20420.0000" class="deleted"><i>36</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">56a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig038.htm#mt306-38-field-56a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20479.0000" class="inserted"><i><a name="c9"><img src="cursor0.gif" alt="" name="imgC9" height="10" width="10"></a>38</i></span></ins>
+<del><span id="ES20476.0000" class="deleted"><i>37</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">57a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Receiving Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig039.htm#mt306-39-field-57a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20513.0000" class="inserted"><i><a name="c10"><img src="cursor0.gif" alt="" name="imgC10" height="10" width="10"></a>39</i></span></ins>
+<del><span id="ES20510.0000" class="deleted"><i>38</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">58a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Beneficiary Institution</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig040.htm#mt306-40-field-58a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20544.0000" class="inserted"><i><a name="c11"><img src="cursor0.gif" alt="" name="imgC11" height="10" width="10"></a>40</i></span></ins>
+<del><span id="ES20541.0000" class="deleted"><i>39</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence C Settlement Instructions for Payment of Premium</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence D Vanilla Block</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15D</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig041.htm#mt306-41-field-15d"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20573.0000" class="inserted"><i><a name="c12"><img src="cursor0.gif" alt="" name="imgC12" height="10" width="10"></a>41</i></span></ins>
+<del><span id="ES20570.0000" class="deleted"><i>40</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30P</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Earliest Exercise Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig042.htm#mt306-42-field-30p"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20636.0000" class="inserted"><i><a name="c13"><img src="cursor0.gif" alt="" name="imgC13" height="10" width="10"></a>42</i></span></ins>
+<del><span id="ES20633.0000" class="deleted"><i>41</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----> </b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30Q</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediate Exercise Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig043.htm#mt306-43-field-30q"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20667.0000" class="inserted"><i><a name="c14"><img src="cursor0.gif" alt="" name="imgC14" height="10" width="10"></a>43</i></span></ins>
+<del><span id="ES20664.0000" class="deleted"><i>42</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----| </b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">26F</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Settlement Type</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">9a</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig044.htm#mt306-44-field-26f"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20696.0000" class="inserted"><i><a name="c15"><img src="cursor0.gif" alt="" name="imgC15" height="10" width="10"></a>44</i></span></ins>
+<del><span id="ES20693.0000" class="deleted"><i>43</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">32B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Put Currency and Amount</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a15d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig045.htm#mt306-45-field-32b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20727.0000" class="inserted"><i><a name="c16"><img src="cursor0.gif" alt="" name="imgC16" height="10" width="10"></a>45</i></span></ins>
+<del><span id="ES20724.0000" class="deleted"><i>44</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">36</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Strike Price</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">12d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig046.htm#mt306-46-field-36"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20779.0000" class="inserted"><i><a name="c17"><img src="cursor0.gif" alt="" name="imgC17" height="10" width="10"></a>46</i></span></ins>
+<del><span id="ES20776.0000" class="deleted"><i>45</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">33B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Call Currency and Amount</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a15d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig047.htm#mt306-47-field-33b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20810.0000" class="inserted"><i><a name="c18"><img src="cursor0.gif" alt="" name="imgC18" height="10" width="10"></a>47</i></span></ins>
+<del><span id="ES20807.0000" class="deleted"><i>46</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence D Vanilla Block</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence E Payout Amount</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15E</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig048.htm#mt306-48-field-15e"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20839.0000" class="inserted"><i><a name="c19"><img src="cursor0.gif" alt="" name="imgC19" height="10" width="10"></a>48</i></span></ins>
+<del><span id="ES20836.0000" class="deleted"><i>47</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">33E</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Currency, Amount</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a15d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig049.htm#mt306-49-field-33e"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20869.0000" class="inserted"><i><a name="c20"><img src="cursor0.gif" alt="" name="imgC20" height="10" width="10"></a>49</i></span></ins>
+<del><span id="ES20866.0000" class="deleted"><i>48</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30H</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Touch Payment Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig050.htm#mt306-50-field-30h"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20899.0000" class="inserted"><i><a name="c21"><img src="cursor0.gif" alt="" name="imgC21" height="10" width="10"></a>50</i></span></ins>
+<del><span id="ES20896.0000" class="deleted"><i>49</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">53a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Delivery Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig051.htm#mt306-51-field-53a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20932.0000" class="inserted"><i><a name="c22"><img src="cursor0.gif" alt="" name="imgC22" height="10" width="10"></a>51</i></span></ins>
+<del><span id="ES20929.0000" class="deleted"><i>50</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">86a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary 2</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig052.htm#mt306-52-field-86a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20965.0000" class="inserted"><i><a name="c23"><img src="cursor0.gif" alt="" name="imgC23" height="10" width="10"></a>52</i></span></ins>
+<del><span id="ES20962.0000" class="deleted"><i>51</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">56a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig053.htm#mt306-53-field-56a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES20997.0000" class="inserted"><i><a name="c24"><img src="cursor0.gif" alt="" name="imgC24" height="10" width="10"></a>53</i></span></ins>
+<del><span id="ES20994.0000" class="deleted"><i>52</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">57a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Receiving Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig054.htm#mt306-54-field-57a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21031.0000" class="inserted"><i><a name="c25"><img src="cursor0.gif" alt="" name="imgC25" height="10" width="10"></a>54</i></span></ins>
+<del><span id="ES21028.0000" class="deleted"><i>53</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">58a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Beneficiary Institution</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig055.htm#mt306-55-field-58a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21062.0000" class="inserted"><i><a name="c26"><img src="cursor0.gif" alt="" name="imgC26" height="10" width="10"></a>55</i></span></ins>
+<del><span id="ES21059.0000" class="deleted"><i>54</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence E Payout Amount</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence F Barrier Block</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15F</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig056.htm#mt306-56-field-15f"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21091.0000" class="inserted"><i><a name="c27"><img src="cursor0.gif" alt="" name="imgC27" height="10" width="10"></a>56</i></span></ins>
+<del><span id="ES21088.0000" class="deleted"><i>55</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22G</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Type of Barrier</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig057.htm#mt306-57-field-22g"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21121.0000" class="inserted"><i><a name="c28"><img src="cursor0.gif" alt="" name="imgC28" height="10" width="10"></a>57</i></span></ins>
+<del><span id="ES21118.0000" class="deleted"><i>56</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">37J</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Barrier Level</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">12d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig058.htm#mt306-58-field-37j"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21150.0000" class="inserted"><i><a name="c29"><img src="cursor0.gif" alt="" name="imgC29" height="10" width="10"></a>58</i></span></ins>
+<del><span id="ES21147.0000" class="deleted"><i>57</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">37L</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Lower Barrier Level</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">12d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig059.htm#mt306-59-field-37l"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21212.0000" class="inserted"><i><a name="c30"><img src="cursor0.gif" alt="" name="imgC30" height="10" width="10"></a>59</i></span></ins>
+<del><span id="ES21209.0000" class="deleted"><i>58</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----> Optional Repetitive Subsequence F1 Barrier Window Block</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30G</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Barrier Window Start Date and End Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n/8!n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig060.htm#mt306-60-field-30g"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21247.0000" class="inserted"><i><a name="c31"><img src="cursor0.gif" alt="" name="imgC31" height="10" width="10"></a>60</i></span></ins>
+<del><span id="ES21244.0000" class="deleted"><i>59</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">29J</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Location and Time for Start Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c[/4!n]</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig061.htm#mt306-61-field-29j"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21282.0000" class="inserted"><i><a name="c32"><img src="cursor0.gif" alt="" name="imgC32" height="10" width="10"></a>61</i></span></ins>
+<del><span id="ES21279.0000" class="deleted"><i>60</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">29K</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Location and Time for End Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c/4!n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig062.htm#mt306-62-field-29k"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21317.0000" class="inserted"><i><a name="c33"><img src="cursor0.gif" alt="" name="imgC33" height="10" width="10"></a>62</i></span></ins>
+<del><span id="ES21314.0000" class="deleted"><i>61</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----> </b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">14S</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Settlement Rate Source</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a2n[/4!n/4!c]</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig063.htm#mt306-63-field-14s"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21370.0000" class="inserted"><i><a name="c34"><img src="cursor0.gif" alt="" name="imgC34" height="10" width="10"></a>63</i></span></ins>
+<del><span id="ES21367.0000" class="deleted"><i>62</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----| </b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----| End of Subsequence F1 Barrier Window Block</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence F Barrier Block</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----> Optional Repetitive Sequence G Trigger Block</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15G</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig064.htm#mt306-64-field-15g"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21399.0000" class="inserted"><i><a name="c35"><img src="cursor0.gif" alt="" name="imgC35" height="10" width="10"></a>64</i></span></ins>
+<del><span id="ES21396.0000" class="deleted"><i>63</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22J</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Type of Trigger</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig065.htm#mt306-65-field-22j"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21429.0000" class="inserted"><i><a name="c36"><img src="cursor0.gif" alt="" name="imgC36" height="10" width="10"></a>65</i></span></ins>
+<del><span id="ES21426.0000" class="deleted"><i>64</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">37U</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Trigger Level</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">12d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig066.htm#mt306-66-field-37u"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21459.0000" class="inserted"><i><a name="c37"><img src="cursor0.gif" alt="" name="imgC37" height="10" width="10"></a>66</i></span></ins>
+<del><span id="ES21456.0000" class="deleted"><i>65</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">37P</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Lower Trigger Level</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">12d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig067.htm#mt306-67-field-37p"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21489.0000" class="inserted"><i><a name="c38"><img src="cursor0.gif" alt="" name="imgC38" height="10" width="10"></a>67</i></span></ins>
+<del><span id="ES21486.0000" class="deleted"><i>66</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">32Q</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Currency Pair</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a/3!a</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig068.htm#mt306-68-field-32q"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21519.0000" class="inserted"><i><a name="c39"><img src="cursor0.gif" alt="" name="imgC39" height="10" width="10"></a>68</i></span></ins>
+<del><span id="ES21516.0000" class="deleted"><i>67</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----> </b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">14S</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Settlement Rate Source</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a2n[/4!n/4!c]</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig069.htm#mt306-69-field-14s"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21550.0000" class="inserted"><i><a name="c40"><img src="cursor0.gif" alt="" name="imgC40" height="10" width="10"></a>69</i></span></ins>
+<del><span id="ES21547.0000" class="deleted"><i>68</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----| </b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----| End of Sequence G Trigger Block</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence H Non Deliverable Option Block</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15H</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig070.htm#mt306-70-field-15h"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21590.0000" class="inserted"><i><a name="c41"><img src="cursor0.gif" alt="" name="imgC41" height="10" width="10"></a>70</i></span></ins>
+<del><span id="ES21587.0000" class="deleted"><i>69</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----> </b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">14S</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Settlement Rate Source</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a2n[/4!n/4!c]</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig071.htm#mt306-71-field-14s"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21621.0000" class="inserted"><i><a name="c42"><img src="cursor0.gif" alt="" name="imgC42" height="10" width="10"></a>71</i></span></ins>
+<del><span id="ES21618.0000" class="deleted"><i>70</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----| </b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">32E</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Settlement Currency</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig072.htm#mt306-72-field-32e"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21650.0000" class="inserted"><i><a name="c43"><img src="cursor0.gif" alt="" name="imgC43" height="10" width="10"></a>72</i></span></ins>
+<del><span id="ES21647.0000" class="deleted"><i>71</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence H Non Deliverable Option Block</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence I Early Termination</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15I</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig073.htm#mt306-73-field-15i"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21703.0000" class="inserted"><i><a name="c44"><img src="cursor0.gif" alt="" name="imgC44" height="10" width="10"></a>73</i></span></ins>
+<del><span id="ES21700.0000" class="deleted"><i>72</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">12G</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Early Termination Style</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig074.htm#mt306-74-field-12g"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21733.0000" class="inserted"><i><a name="c45"><img src="cursor0.gif" alt="" name="imgC45" height="10" width="10"></a>74</i></span></ins>
+<del><span id="ES21730.0000" class="deleted"><i>73</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30T</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Early Termination Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig075.htm#mt306-75-field-30t"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21764.0000" class="inserted"><i><a name="c46"><img src="cursor0.gif" alt="" name="imgC46" height="10" width="10"></a>75</i></span></ins>
+<del><span id="ES21761.0000" class="deleted"><i>74</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22Y</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Frequency of Early Termination</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig076.htm#mt306-76-field-22y"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21796.0000" class="inserted"><i><a name="c47"><img src="cursor0.gif" alt="" name="imgC47" height="10" width="10"></a>76</i></span></ins>
+<del><span id="ES21793.0000" class="deleted"><i>75</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">85a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Exercising Party</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig077.htm#mt306-77-field-85a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21827.0000" class="inserted"><i><a name="c48"><img src="cursor0.gif" alt="" name="imgC48" height="10" width="10"></a>77</i></span></ins>
+<del><span id="ES21824.0000" class="deleted"><i>76</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">88a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Non-Exercising Party</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig078.htm#mt306-78-field-88a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21858.0000" class="inserted"><i><a name="c49"><img src="cursor0.gif" alt="" name="imgC49" height="10" width="10"></a>78</i></span></ins>
+<del><span id="ES21855.0000" class="deleted"><i>77</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">84a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Calculation Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, B, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig079.htm#mt306-79-field-84a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21889.0000" class="inserted"><i><a name="c50"><img src="cursor0.gif" alt="" name="imgC50" height="10" width="10"></a>79</i></span></ins>
+<del><span id="ES21886.0000" class="deleted"><i>78</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30Y</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Commencement Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig080.htm#mt306-80-field-30y"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21918.0000" class="inserted"><i><a name="c51"><img src="cursor0.gif" alt="" name="imgC51" height="10" width="10"></a>80</i></span></ins>
+<del><span id="ES21915.0000" class="deleted"><i>79</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">29L</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Expiry Details</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n/4!c/4!n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig081.htm#mt306-81-field-29l"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES21948.0000" class="inserted"><i><a name="c52"><img src="cursor0.gif" alt="" name="imgC52" height="10" width="10"></a>81</i></span></ins>
+<del><span id="ES21945.0000" class="deleted"><i>80</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">29E</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Earliest Exercise Time</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c/4!n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig082.htm#mt306-82-field-29e"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22011.0000" class="inserted"><i><a name="c53"><img src="cursor0.gif" alt="" name="imgC53" height="10" width="10"></a>82</i></span></ins>
+<del><span id="ES22008.0000" class="deleted"><i>81</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">29M</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Latest Exercise Time</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c/4!n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig083.htm#mt306-83-field-29m"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22042.0000" class="inserted"><i><a name="c54"><img src="cursor0.gif" alt="" name="imgC54" height="10" width="10"></a>83</i></span></ins>
+<del><span id="ES22039.0000" class="deleted"><i>82</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">17I</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Cash Settlement</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig084.htm#mt306-84-field-17i"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22071.0000" class="inserted"><i><a name="c55"><img src="cursor0.gif" alt="" name="imgC55" height="10" width="10"></a>84</i></span></ins>
+<del><span id="ES22068.0000" class="deleted"><i>83</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">29N</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Cash Settlement Valuation Details</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n/4!c/4!n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig085.htm#mt306-85-field-29n"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22103.0000" class="inserted"><i><a name="c56"><img src="cursor0.gif" alt="" name="imgC56" height="10" width="10"></a>85</i></span></ins>
+<del><span id="ES22100.0000" class="deleted"><i>84</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30Z</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Cash Settlement Payment Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig086.htm#mt306-86-field-30z"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22134.0000" class="inserted"><i><a name="c57"><img src="cursor0.gif" alt="" name="imgC57" height="10" width="10"></a>86</i></span></ins>
+<del><span id="ES22131.0000" class="deleted"><i>85</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">14S</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Settlement Rate Source</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a2n[/4!n/4!c]</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig087.htm#mt306-87-field-14s"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22187.0000" class="inserted"><i><a name="c58"><img src="cursor0.gif" alt="" name="imgC58" height="10" width="10"></a>87</i></span></ins>
+<del><span id="ES22184.0000" class="deleted"><i>86</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence I Early Termination</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence J Averaging Options and Forwards</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15J</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig088.htm#mt306-88-field-15j"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22216.0000" class="inserted"><i><a name="c59"><img src="cursor0.gif" alt="" name="imgC59" height="10" width="10"></a>88</i></span></ins>
+<del><span id="ES22213.0000" class="deleted"><i>87</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">14S</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Settlement Rate Source</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a2n[/4!n/4!c]</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig089.htm#mt306-89-field-14s"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22247.0000" class="inserted"><i><a name="c60"><img src="cursor0.gif" alt="" name="imgC60" height="10" width="10"></a>89</i></span></ins>
+<del><span id="ES22244.0000" class="deleted"><i>88</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">14B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Average Strike Price Calculation</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">2!c</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig090.htm#mt306-90-field-14b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22279.0000" class="inserted"><i><a name="c61"><img src="cursor0.gif" alt="" name="imgC61" height="10" width="10"></a>90</i></span></ins>
+<del><span id="ES22276.0000" class="deleted"><i>89</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16C</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Decimal Places</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">2n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig091.htm#mt306-91-field-16c"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22307.0000" class="inserted"><i><a name="c62"><img src="cursor0.gif" alt="" name="imgC62" height="10" width="10"></a>91</i></span></ins>
+<del><span id="ES22304.0000" class="deleted"><i>90</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Subsequence J1 Spot Average Dates and Weightings</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">18B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Number of Spot Averaging Dates</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig092.htm#mt306-92-field-18b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22339.0000" class="inserted"><i><a name="c63"><img src="cursor0.gif" alt="" name="imgC63" height="10" width="10"></a>92</i></span></ins>
+<del><span id="ES22336.0000" class="deleted"><i>91</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----> </b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30M</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Spot Averaging Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig093.htm#mt306-93-field-30m"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22369.0000" class="inserted"><i><a name="c64"><img src="cursor0.gif" alt="" name="imgC64" height="10" width="10"></a>93</i></span></ins>
+<del><span id="ES22366.0000" class="deleted"><i>92</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">19Y</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Spot Averaging Weighting Factor</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig094.htm#mt306-94-field-19y"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22400.0000" class="inserted"><i><a name="c65"><img src="cursor0.gif" alt="" name="imgC65" height="10" width="10"></a>94</i></span></ins>
+<del><span id="ES22397.0000" class="deleted"><i>93</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----| </b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Subsequence J1 Spot Average Dates and Weightings</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Subsequence J2 Strike Average Dates and Weightings</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">18C</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Number of Strike Averaging Dates</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig095.htm#mt306-95-field-18c"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22464.0000" class="inserted"><i><a name="c66"><img src="cursor0.gif" alt="" name="imgC66" height="10" width="10"></a>95</i></span></ins>
+<del><span id="ES22461.0000" class="deleted"><i>94</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----> </b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30N</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Strike Averaging Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig096.htm#mt306-96-field-30n"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22494.0000" class="inserted"><i><a name="c67"><img src="cursor0.gif" alt="" name="imgC67" height="10" width="10"></a>96</i></span></ins>
+<del><span id="ES22491.0000" class="deleted"><i>95</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">19Z</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Strike Averaging Weighting Factor</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig097.htm#mt306-97-field-19z"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22525.0000" class="inserted"><i><a name="c68"><img src="cursor0.gif" alt="" name="imgC68" height="10" width="10"></a>97</i></span></ins>
+<del><span id="ES22522.0000" class="deleted"><i>96</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----| </b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Subsequence J2 Strike Average Dates and Weightings</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">19C</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Adjustment</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">[N]15d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig098.htm#mt306-98-field-19c"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22576.0000" class="inserted"><i><a name="c69"><img src="cursor0.gif" alt="" name="imgC69" height="10" width="10"></a>98</i></span></ins>
+<del><span id="ES22573.0000" class="deleted"><i>97</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">23C</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Calculation of Settlement Amount</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">7a</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig099.htm#mt306-99-field-23c"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22607.0000" class="inserted"><i><a name="c70"><img src="cursor0.gif" alt="" name="imgC70" height="10" width="10"></a>99</i></span></ins>
+<del><span id="ES22604.0000" class="deleted"><i>98</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence J Averaging Options and Forwards</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence K Additional Information</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15K</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig100.htm#mt306-100-field-15k"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22636.0000" class="inserted"><i><a name="c71"><img src="cursor0.gif" alt="" name="imgC71" height="10" width="10"></a>100</i></span></ins>
+<del><span id="ES22633.0000" class="deleted"><i>99</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">29A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Contact Information</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4*35x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig101.htm#mt306-101-field-29a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22666.0000" class="inserted"><i><a name="c72"><img src="cursor0.gif" alt="" name="imgC72" height="10" width="10"></a>101</i></span></ins>
+<del><span id="ES22663.0000" class="deleted"><i>100</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">24D</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Dealing Method</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c[/35x]</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig102.htm#mt306-102-field-24d"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22696.0000" class="inserted"><i><a name="c73"><img src="cursor0.gif" alt="" name="imgC73" height="10" width="10"></a>102</i></span></ins>
+<del><span id="ES22693.0000" class="deleted"><i>101</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">88a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Broker Identification</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A or D</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig103.htm#mt306-103-field-88a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22726.0000" class="inserted"><i><a name="c74"><img src="cursor0.gif" alt="" name="imgC74" height="10" width="10"></a>103</i></span></ins>
+<del><span id="ES22723.0000" class="deleted"><i>102</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">71F</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Broker's Commission</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a15d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig104.htm#mt306-104-field-71f"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22755.0000" class="inserted"><i><a name="c75"><img src="cursor0.gif" alt="" name="imgC75" height="10" width="10"></a>104</i></span></ins>
+<del><span id="ES22752.0000" class="deleted"><i>103</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">21G</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Broker's Reference</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig105.htm#mt306-105-field-21g"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22784.0000" class="inserted"><i><a name="c76"><img src="cursor0.gif" alt="" name="imgC76" height="10" width="10"></a>105</i></span></ins>
+<del><span id="ES22781.0000" class="deleted"><i>104</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">72</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sender to Receiver Information</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">6*35x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig106.htm#mt306-106-field-72"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22817.0000" class="inserted"><i><a name="c77"><img src="cursor0.gif" alt="" name="imgC77" height="10" width="10"></a>106</i></span></ins>
+<del><span id="ES22814.0000" class="deleted"><i>105</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence K Additional Information</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence L Additional Amounts</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15L</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig107.htm#mt306-107-field-15l"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22846.0000" class="inserted"><i><a name="c78"><img src="cursor0.gif" alt="" name="imgC78" height="10" width="10"></a>107</i></span></ins>
+<del><span id="ES22843.0000" class="deleted"><i>106</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">18A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Number of Repetitions</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">5n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig108.htm#mt306-108-field-18a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22876.0000" class="inserted"><i><a name="c79"><img src="cursor0.gif" alt="" name="imgC79" height="10" width="10"></a>108</i></span></ins>
+<del><span id="ES22873.0000" class="deleted"><i>107</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----> </b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30F</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Payment Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig109.htm#mt306-109-field-30f"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22905.0000" class="inserted"><i><a name="c80"><img src="cursor0.gif" alt="" name="imgC80" height="10" width="10"></a>109</i></span></ins>
+<del><span id="ES22902.0000" class="deleted"><i>108</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">32H</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Currency, Payment Amount</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">[N]3!a15d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig110.htm#mt306-110-field-32h"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES22969.0000" class="inserted"><i><a name="c81"><img src="cursor0.gif" alt="" name="imgC81" height="10" width="10"></a>110</i></span></ins>
+<del><span id="ES22966.0000" class="deleted"><i>109</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----| </b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">53a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Delivery Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig111.htm#mt306-111-field-53a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23002.0000" class="inserted"><i><a name="c82"><img src="cursor0.gif" alt="" name="imgC82" height="10" width="10"></a>111</i></span></ins>
+<del><span id="ES22999.0000" class="deleted"><i>110</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">86a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary 2</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig112.htm#mt306-112-field-86a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23035.0000" class="inserted"><i><a name="c83"><img src="cursor0.gif" alt="" name="imgC83" height="10" width="10"></a>112</i></span></ins>
+<del><span id="ES23032.0000" class="deleted"><i>111</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">56a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig113.htm#mt306-113-field-56a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23067.0000" class="inserted"><i><a name="c84"><img src="cursor0.gif" alt="" name="imgC84" height="10" width="10"></a>113</i></span></ins>
+<del><span id="ES23064.0000" class="deleted"><i>112</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">57a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Receiving Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig114.htm#mt306-114-field-57a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23123.0000" class="inserted"><i><a name="c85"><img src="cursor0.gif" alt="" name="imgC85" height="10" width="10"></a>114</i></span></ins>
+<del><span id="ES23120.0000" class="deleted"><i>113</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence L Additional Amounts</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence M Reporting Information</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15M</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig115.htm#mt306-115-field-15m"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23152.0000" class="inserted"><i><a name="c86"><img src="cursor0.gif" alt="" name="imgC86" height="10" width="10"></a>115</i></span></ins>
+<del><span id="ES23149.0000" class="deleted"><i>114</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----> Optional Repetitive Subsequence M1 Reporting Parties</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22L</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Reporting Jurisdiction</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">35x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig116.htm#mt306-116-field-22l"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23182.0000" class="inserted"><i><a name="c87"><img src="cursor0.gif" alt="" name="imgC87" height="10" width="10"></a>116</i></span></ins>
+<del><span id="ES23179.0000" class="deleted"><i>115</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">91a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Reporting Party</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig117.htm#mt306-117-field-91a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23212.0000" class="inserted"><i><a name="c88"><img src="cursor0.gif" alt="" name="imgC88" height="10" width="10"></a>117</i></span></ins>
+<del><span id="ES23209.0000" class="deleted"><i>116</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----> Optional Repetitive Subsequence M1a Unique Transaction Identifier</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22M</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">UTI Namespace/Issuer Code</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig118.htm#mt306-118-field-22m"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23256.0000" class="inserted"><i><a name="c89"><img src="cursor0.gif" alt="" name="imgC89" height="10" width="10"></a>118</i></span></ins>
+<del><span id="ES23253.0000" class="deleted"><i>117</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22N</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Transaction Identifier</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">32x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig119.htm#mt306-119-field-22n"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23285.0000" class="inserted"><i><a name="c90"><img src="cursor0.gif" alt="" name="imgC90" height="10" width="10"></a>119</i></span></ins>
+<del><span id="ES23282.0000" class="deleted"><i>118</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----> Optional Repetitive Subsequence M1a1 Prior Unique Transaction Identifier</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22P</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">PUTI Namespace/Issuer Code</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig120.htm#mt306-120-field-22p"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23315.0000" class="inserted"><i><a name="c91"><img src="cursor0.gif" alt="" name="imgC91" height="10" width="10"></a>120</i></span></ins>
+<del><span id="ES23312.0000" class="deleted"><i>119</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22R</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Prior Transaction Identifier</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">32x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig121.htm#mt306-121-field-22r"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23345.0000" class="inserted"><i><a name="c92"><img src="cursor0.gif" alt="" name="imgC92" height="10" width="10"></a>121</i></span></ins>
+<del><span id="ES23342.0000" class="deleted"><i>120</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----| End of Subsequence M1a1 Prior Unique Transaction Identifier</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----| End of Subsequence M1a Unique Transaction Identifier</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----| End of Subsequence M1 Reporting Parties</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">96a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Clearing Exception Party</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig122.htm#mt306-122-field-96a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23401.0000" class="inserted"><i><a name="c93"><img src="cursor0.gif" alt="" name="imgC93" height="10" width="10"></a>122</i></span></ins>
+<del><span id="ES23398.0000" class="deleted"><i>121</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----> </b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22S</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Clearing Broker Identification</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a/35x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig123.htm#mt306-123-field-22s"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23431.0000" class="inserted"><i><a name="c94"><img src="cursor0.gif" alt="" name="imgC94" height="10" width="10"></a>123</i></span></ins>
+<del><span id="ES23428.0000" class="deleted"><i>122</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----| </b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22T</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Cleared Product Identification</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">35x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig124.htm#mt306-124-field-22t"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23460.0000" class="inserted"><i><a name="c95"><img src="cursor0.gif" alt="" name="imgC95" height="10" width="10"></a>124</i></span></ins>
+<del><span id="ES23457.0000" class="deleted"><i>123</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">17E</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Clearing Threshold Indicator</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig125.htm#mt306-125-field-17e"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23491.0000" class="inserted"><i><a name="c96"><img src="cursor0.gif" alt="" name="imgC96" height="10" width="10"></a>125</i></span></ins>
+<del><span id="ES23488.0000" class="deleted"><i>124</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22U</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Underlying Product Identifier</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">6a</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig126.htm#mt306-126-field-22u"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23522.0000" class="inserted"><i><a name="c97"><img src="cursor0.gif" alt="" name="imgC97" height="10" width="10"></a>126</i></span></ins>
+<del><span id="ES23519.0000" class="deleted"><i>125</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">35B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Identification of Financial Instrument</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">[ISIN1!e12!c]<br><img src="cursor0.gif" alt="" name="space" height="10" width="10">[4*35x]</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig127.htm#mt306-127-field-35b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23554.0000" class="inserted"><i><a name="c98"><img src="cursor0.gif" alt="" name="imgC98" height="10" width="10"></a>127</i></span></ins>
+<del><span id="ES23551.0000" class="deleted"><i>126</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">17H</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Allocation Indicator</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig128.htm#mt306-128-field-17h"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23583.0000" class="inserted"><i><a name="c99"><img src="cursor0.gif" alt="" name="imgC99" height="10" width="10"></a>128</i></span></ins>
+<del><span id="ES23580.0000" class="deleted"><i>127</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">17P</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Collateralisation Indicator</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig129.htm#mt306-129-field-17p"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23644.0000" class="inserted"><i><a name="c100"><img src="cursor0.gif" alt="" name="imgC100" height="10" width="10"></a>129</i></span></ins>
+<del><span id="ES23641.0000" class="deleted"><i>128</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22V</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Execution Venue</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">35x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig130.htm#mt306-130-field-22v"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23673.0000" class="inserted"><i><a name="c101"><img src="cursor0.gif" alt="" name="imgC101" height="10" width="10"></a>130</i></span></ins>
+<del><span id="ES23670.0000" class="deleted"><i>129</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">98D</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Execution Timestamp</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n6!n[,3n][/[N]2!n[2!n]]</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig131.htm#mt306-131-field-98d"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23702.0000" class="inserted"><i><a name="c102"><img src="cursor0.gif" alt="" name="imgC102" height="10" width="10"></a>131</i></span></ins>
+<del><span id="ES23699.0000" class="deleted"><i>130</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">17W</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Non Standard Flag</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig132.htm#mt306-132-field-17w"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23733.0000" class="inserted"><i><a name="c103"><img src="cursor0.gif" alt="" name="imgC103" height="10" width="10"></a>132</i></span></ins>
+<del><span id="ES23730.0000" class="deleted"><i>131</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">17Y</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Financial Nature of the Counterparty Indicator</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig133.htm#mt306-133-field-17y"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23766.0000" class="inserted"><i><a name="c104"><img src="cursor0.gif" alt="" name="imgC104" height="10" width="10"></a>133</i></span></ins>
+<del><span id="ES23763.0000" class="deleted"><i>132</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">17Z</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Collateral Portfolio Indicator</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig134.htm#mt306-134-field-17z"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23818.0000" class="inserted"><i><a name="c105"><img src="cursor0.gif" alt="" name="imgC105" height="10" width="10"></a>134</i></span></ins>
+<del><span id="ES23815.0000" class="deleted"><i>133</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22Q</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Collateral Portfolio Code</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">10x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig135.htm#mt306-135-field-22q"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23848.0000" class="inserted"><i><a name="c106"><img src="cursor0.gif" alt="" name="imgC106" height="10" width="10"></a>135</i></span></ins>
+<del><span id="ES23845.0000" class="deleted"><i>134</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">17L</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Portfolio Compression Indicator</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig136.htm#mt306-136-field-17l"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23878.0000" class="inserted"><i><a name="c107"><img src="cursor0.gif" alt="" name="imgC107" height="10" width="10"></a>136</i></span></ins>
+<del><span id="ES23875.0000" class="deleted"><i>135</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">17M</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Corporate Sector Indicator</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig137.htm#mt306-137-field-17m"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23909.0000" class="inserted"><i><a name="c108"><img src="cursor0.gif" alt="" name="imgC108" height="10" width="10"></a>137</i></span></ins>
+<del><span id="ES23906.0000" class="deleted"><i>136</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">17Q</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Trade with Non-EEA Counterparty Indicator</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig138.htm#mt306-138-field-17q"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23941.0000" class="inserted"><i><a name="c109"><img src="cursor0.gif" alt="" name="imgC109" height="10" width="10"></a>138</i></span></ins>
+<del><span id="ES23938.0000" class="deleted"><i>137</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">17S</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intragroup Trade Indicator</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig139.htm#mt306-139-field-17s"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES23971.0000" class="inserted"><i><a name="c110"><img src="cursor0.gif" alt="" name="imgC110" height="10" width="10"></a>139</i></span></ins>
+<del><span id="ES23968.0000" class="deleted"><i>138</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">17X</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Commercial or Treasury Financing Indicator</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig140.htm#mt306-140-field-17x"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES24003.0000" class="inserted"><i><a name="c111"><img src="cursor0.gif" alt="" name="imgC111" height="10" width="10"></a>140</i></span></ins>
+<del><span id="ES24000.0000" class="deleted"><i>139</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" colspan="5" align="LEFT" valign="TOP" width="100%"><ins><span id="ES12652.0000.0000" class="inserted"><b><a name="c112"><img src="cursor0.gif" alt="" name="imgC112" height="10" width="10"></a>-----> </b></span></ins>
+</td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="CENTER" valign="TOP" width="10%"><ins><span id="ES12653.0000.0000" class="inserted"><a name="c113"><img src="cursor0.gif" alt="" name="imgC113" height="10" width="10"></a>O</span></ins>
+</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="6%"><ins><span id="ES12653.0003.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">34C</span></ins>
+</td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="48%"><ins><span id="ES12653.0006.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Commission and Fees</span></ins>
+</td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="29%"><ins><span id="ES12653.0009.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c/[N]3!a15d</span></ins>
+</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig141.htm#mt306-141-field-34c"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><ins><span id="ES12653.0012.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>141</i></span></ins>
+</td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" colspan="5" align="LEFT" valign="TOP" width="100%"><ins><span id="ES12654.0000.0000" class="inserted"><b><a name="c114"><img src="cursor0.gif" alt="" name="imgC114" height="10" width="10"></a>-----| </b></span></ins>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">77A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Additional Reporting Information</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">20*35x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="aig142.htm#mt306-142-field-77a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES24034.0000" class="inserted"><i><a name="c115"><img src="cursor0.gif" alt="" name="imgC115" height="10" width="10"></a>142</i></span></ins>
+<del><span id="ES24031.0000" class="deleted"><i>140</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence M Reporting Information</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="CENTER" valign="TOP" width="100%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M = Mandatory, O = Optional - Network Validated Rules may apply</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="noprint">
+<p class="footer" align="CENTER"><a href="aib.htm"><img src="pgback.gif" alt="Previous Page"></a>&nbsp;
+<a href="#top"><img src="pgtop.gif" alt="Top Of Page"></a>&nbsp;
+<a href="aid.htm"><img src="pgnext.gif" alt="Next Page"></a> 
+</p>
+</div>
+
+</body>
+</html>
+

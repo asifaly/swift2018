@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ 
+<html>
+<head>
+<title>Standards - Category 1 - MT&#160;102 STP Usage Rules</title>
+<link href="mark.css" type="text/css" rel="stylesheet">
+<meta http-equiv="Content-Language" content="EN_UK">
+<meta name="Creator" content="S.W.I.F.T. User Documentation">
+<meta name="Date.Issued" content="22 December 2017">
+<meta name="Description" content="Standards, Standards MT, November 2018, Category 1, Message Reference Guide, Standards Release Guide, MT 102 STP Usage Rules">
+<meta name="Format" content="HTML">
+<meta name="Identifier" content="MT102STPUsageRules">
+<meta name="Keywords" content="SWIFT, Standards, Standards MT, Category 1, Customer Payments and Cheques">
+<meta name="Language" content="EN_UK">
+<meta name="Publisher" content="S.W.I.F.T. SCRL">
+<meta name="Relation.IsPartOf" content="Standards - Category 1">
+<meta name="Rights" content="Copyright (c) S.W.I.F.T. SCRL('SWIFT'), avenue Adele 1, B-1310 La Hulpe, Belgium. 22 December 2017. All rights reserved.">
+<meta name="Subject" content="MT 102 STP Usage Rules">
+<meta name="Type" content="UsageRules">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var selftitle  = "MT 102 STP Usage Rules" ;
+// --></script>
+<meta name="bookid" content="cat1">
+<meta name="productfamily" content="Standards">
+<meta name="productname" content="Standards MT">
+<meta name="productrelease" content="November 2018">
+<meta name="subproductname" content="Category 1 - Customer Payments and Cheques">
+<meta name="subproductrelease" content="">
+<meta name="Book.Context" content="MT 102STP">
+<meta name="Book.Product" content="Category 1 - Customer Payments and Cheques for Standards MT November 2018">
+<meta name="Book.Title" content="Message Reference Guide - Standards Release Guide">
+<meta name="informationtypes" content="Standards">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var contextStr  = "MT 102 STP Usage Rules" ;
+// --></script>
+<meta http-equiv="Content-Type" content="text/html; CHARSET=ISO-8859-1">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var imgCursorOn  = new Image() ;     // the image to show when the cursor is on
+imgCursorOn.src  = 'CURSOR1.GIF';
+var imgCursorOff = new Image() ;     // the image to show when the cursor is off
+imgCursorOff.src = 'CURSOR0.GIF' ;
+function refreshRev() {
+   if (parent!=self && parent.parent != parent.self && parent.parent.frames.length==2 && parent.parent.frames[1]==parent) {
+      if (parent.parent.frames[0].frames.length==0) {
+         if (parent.parent.frames[0].revMax!=null) {
+            parent.parent.frames[0].refreshRevCursor();
+         }
+      }
+      else {
+         if (parent.parent.frames[0].frames.length==2) {
+            if (parent.parent.frames[0].frames[1].revMax!=null) {
+               parent.parent.frames[0].frames[1].refreshRevCursor();
+            }
+         }
+      }
+   }
+}
+// end-of-script --></script>
+<link href="swiftuhb.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/JavaScript" src="uhbdoc.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+var toptitle="Standards - Category 1";
+var linkself="ahe.htm";
+var linkparent="";
+var leaf=true;
+var linkleft="ahd.htm";
+var linkup="";
+var linkright="ahf001.htm";
+var linktop="title.htm";
+
+function onLoadUhbDoc() {
+   resyncUhb();
+   refreshRev(); 
+}
+//-->
+</script>
+</head>
+<body onload="onLoadUhbDoc();" class="BOOK"><div class="noprint"><div class="showhidetoc"><a href="javascript:showHideToc();"><img src="hidetoc.gif" name="showhidetoc" alt="Show/Hide TOC"></a></div></div>
+<span class="noprint"><a name="c0"></a>
+</span>
+<a name="genahe"></a>
+<div class="noprint"><a name="top"></a>
+</div>
+
+
+
+<h2>MT&nbsp;102 STP Usage Rules</h2>
+
+
+<p>If a registered user receives an MT 102 STP without bilateral agreement with the Sender, the Receiver should query the message according to normal banking practice.
+</p>
+
+<h3>Usage Rules for Amount Related Fields</h3>
+
+
+<p class="stem">There is a relationship between the amount related fields 33B, 32B, 36, 71G, 71F, 19 and 32A which may be logically expressed in the following formulas:
+</p>
+
+<ul>
+<li>
+<p>For each occurrence of sequence B, the instructed amount in field 33B, adjusted with the exchange rate in field 36, minus the Sender's charges in field(s) 71F, equals the transaction amount in field 32B.
+</p></li>
+
+<li>
+<p>The sum of all transaction amounts in fields 32B, equals the total amount in field 19.
+</p></li>
+
+<li>
+<p>The sum of all Receiver's charges in fields 71G of sequence B, equals the total Receiver's charges of field 71G in sequence C.
+</p></li>
+
+<li>
+<p>The total amount in field 19 (or the sum of all transaction amounts in fields 32B), plus the total Receiver's charges in field 71G of sequence C, equals the interbank settled amount in field 32A.
+</p></li>
+
+</ul>
+
+
+<p>Presence of the fields mentioned above is subject to the conditional field rules C5, C6, C7, C8, C9 and C10. If a field is not present, that field must not be taken into account in the formula. If field 71F is present more than once, all occurrences of that field must be taken into account in the formula.
+</p>
+<table width="98%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th rowspan="2" align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sequence A<br><img src="cursor0.gif" alt="" name="space" height="10" width="10">if field 71A is ...</th>
+
+<th colspan="3" align="CENTER" valign="TOP" width="75%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sequence B</th>
+
+</tr>
+
+<tr>
+<th align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">then field 32B is ...</th>
+
+<th align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">field 71F is ...</th>
+
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">and field 71G is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">OUR</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Net amount to be credited to the Beneficiary.<br><img src="cursor0.gif" alt="" name="space" height="10" width="10">Charges have been prepaid by the ordering customer.</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">SHA</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Amount as instructed by the originator, for example, invoice amount.<br><img src="cursor0.gif" alt="" name="space" height="10" width="10">Receiver will deduct its own charges.</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">BEN</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Amount instructed by the originator, after sending bank has deducted its charges.<br><img src="cursor0.gif" alt="" name="space" height="10" width="10">Receiver will deduct its charges.</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">At least one occurrence mandatory</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+<table width="98%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th rowspan="2" align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sequence A<br><img src="cursor0.gif" alt="" name="space" height="10" width="10">if field 71A is ...</th>
+
+<th colspan="3" align="CENTER" valign="TOP" width="75%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sequence C</th>
+
+</tr>
+
+<tr>
+<th align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">then field 19 is ...</th>
+
+<th align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">field 32A is ...</th>
+
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">and field 71G is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">OUR</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sum of field(s) 32B of sequence B</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Settlement Amount equals field 19 plus field 71G of sequence C</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sum of fields 71G of sequences B</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">SHA</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not used</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Settlement Amount equals Sum of field(s) 32B of sequence B</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">BEN</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not used</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Settlement Amount equals Sum of field(s) 32B of sequence B</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="noprint">
+<p class="footer" align="CENTER"><a href="ahd.htm"><img src="pgback.gif" alt="Previous Page"></a>&nbsp;
+<a href="#top"><img src="pgtop.gif" alt="Top Of Page"></a>&nbsp;
+<a href="ahf001.htm"><img src="pgnext.gif" alt="Next Page"></a> 
+</p>
+</div>
+
+</body>
+</html>
+

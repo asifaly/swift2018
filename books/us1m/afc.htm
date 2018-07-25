@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ 
+<html>
+<head>
+<title>Standards - Category 1 - MT&#160;101 Format Specifications</title>
+<link href="mark.css" type="text/css" rel="stylesheet">
+<meta http-equiv="Content-Language" content="EN_UK">
+<meta name="Creator" content="S.W.I.F.T. User Documentation">
+<meta name="Date.Issued" content="22 December 2017">
+<meta name="Description" content="Standards, Standards MT, November 2018, Category 1, Message Reference Guide, Standards Release Guide, MT 101 Format Specifications">
+<meta name="Format" content="HTML">
+<meta name="Identifier" content="MT101FormatSpec">
+<meta name="Keywords" content="SWIFT, Standards, Standards MT, Category 1, Customer Payments and Cheques">
+<meta name="Language" content="EN_UK">
+<meta name="Publisher" content="S.W.I.F.T. SCRL">
+<meta name="Relation.IsPartOf" content="Standards - Category 1">
+<meta name="Rights" content="Copyright (c) S.W.I.F.T. SCRL('SWIFT'), avenue Adele 1, B-1310 La Hulpe, Belgium. 22 December 2017. All rights reserved.">
+<meta name="Subject" content="MT 101 Format Specifications">
+<meta name="Type" content="FormatSpec">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var selftitle  = "MT 101 Format Specifications" ;
+// --></script>
+<meta name="bookid" content="cat1">
+<meta name="productfamily" content="Standards">
+<meta name="productname" content="Standards MT">
+<meta name="productrelease" content="November 2018">
+<meta name="subproductname" content="Category 1 - Customer Payments and Cheques">
+<meta name="subproductrelease" content="">
+<meta name="Book.Context" content="MT 101">
+<meta name="Book.Product" content="Category 1 - Customer Payments and Cheques for Standards MT November 2018">
+<meta name="Book.Title" content="Message Reference Guide - Standards Release Guide">
+<meta name="informationtypes" content="Standards">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var contextStr  = "MT 101 Format Specifications" ;
+// --></script>
+<meta http-equiv="Content-Type" content="text/html; CHARSET=ISO-8859-1">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var imgCursorOn  = new Image() ;     // the image to show when the cursor is on
+imgCursorOn.src  = 'CURSOR1.GIF';
+var imgCursorOff = new Image() ;     // the image to show when the cursor is off
+imgCursorOff.src = 'CURSOR0.GIF' ;
+function refreshRev() {
+   if (parent!=self && parent.parent != parent.self && parent.parent.frames.length==2 && parent.parent.frames[1]==parent) {
+      if (parent.parent.frames[0].frames.length==0) {
+         if (parent.parent.frames[0].revMax!=null) {
+            parent.parent.frames[0].refreshRevCursor();
+         }
+      }
+      else {
+         if (parent.parent.frames[0].frames.length==2) {
+            if (parent.parent.frames[0].frames[1].revMax!=null) {
+               parent.parent.frames[0].frames[1].refreshRevCursor();
+            }
+         }
+      }
+   }
+}
+// end-of-script --></script>
+<link href="swiftuhb.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/JavaScript" src="uhbdoc.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+var toptitle="Standards - Category 1";
+var linkself="afc.htm";
+var linkparent="";
+var leaf=true;
+var linkleft="afb.htm";
+var linkup="";
+var linkright="afd.htm";
+var linktop="title.htm";
+
+function onLoadUhbDoc() {
+   resyncUhb();
+   refreshRev(); 
+}
+//-->
+</script>
+</head>
+<body onload="onLoadUhbDoc();" class="BOOK"><div class="noprint"><div class="showhidetoc"><a href="javascript:showHideToc();"><img src="hidetoc.gif" name="showhidetoc" alt="Show/Hide TOC"></a></div></div>
+<span class="noprint"><a name="c0"></a>
+</span>
+<a name="genafc"></a>
+<div class="noprint"><a name="top"></a>
+</div>
+
+
+
+<h2>MT&nbsp;101 Format Specifications</h2>
+
+
+<p class="stem">The MT 101 consists of two sequences:
+</p>
+
+<ul>
+<li>
+<p>Sequence A General Information is a single occurrence mandatory sequence and contains information to be applied to all individual transactions detailed in sequence B.
+</p></li>
+
+<li>
+<p>Sequence B Transaction Details is a repetitive sequence; each occurrence provides details of one individual transaction. Fields which appear in both sequences are mutually exclusive.
+</p></li>
+
+</ul>
+
+
+<table class="formatspec" width="98%" border="1" cellpadding="5"><caption align="LEFT"><b>MT&nbsp;101 Request for Transfer</b></caption>
+
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Status</th>
+
+<th align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Tag</th>
+
+<th align="CENTER" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Field Name</th>
+
+<th align="CENTER" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Content/Options</th>
+
+<th align="CENTER" valign="TOP" width="7%"><i><img src="cursor0.gif" alt="" name="space" height="10" width="10">No.</i></th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory Sequence A General Information</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">20</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sender's Reference</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff001.htm#mt101-1-field-20"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>1</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">21R</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Customer Specified Reference</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff002.htm#mt101-2-field-21r"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>2</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">28D</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Message Index/Total</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">5n/5n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff003.htm#mt101-3-field-28d"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>3</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">50a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Instructing Party</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">C or L</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff004.htm#mt101-4-field-50a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>4</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">50a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Ordering Customer</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">F, G, or H</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff005.htm#mt101-5-field-50a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>5</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">52a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Account Servicing Institution</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A or C</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff006.htm#mt101-6-field-52a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>6</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">51A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sending Institution</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">[/1!a][/34x]<br><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!a2!a2!c[3!c]</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff007.htm#mt101-7-field-51a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>7</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Requested Execution Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">6!n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff008.htm#mt101-8-field-30"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>8</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">25</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Authorisation</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">35x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff009.htm#mt101-9-field-25"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>9</i></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence A General Information</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----> Mandatory Repetitive Sequence B Transaction Details</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">21</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Transaction Reference</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff010.htm#mt101-10-field-21"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>10</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">21F</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">F/X Deal Reference</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff011.htm#mt101-11-field-21f"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>11</i></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----> </b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">23E</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Instruction Code</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c[/30x]</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff012.htm#mt101-12-field-23e"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>12</i></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----| </b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">32B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Currency/Transaction Amount</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a15d</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff013.htm#mt101-13-field-32b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>13</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">50a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Instructing Party</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">C or L</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff014.htm#mt101-14-field-50a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>14</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">50a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Ordering Customer</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">F, G, or H</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff015.htm#mt101-15-field-50a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>15</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">52a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Account Servicing Institution</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A or C</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff016.htm#mt101-16-field-52a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>16</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">56a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, C, or D</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff017.htm#mt101-17-field-56a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>17</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">57a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Account With Institution</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, C, or D</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff018.htm#mt101-18-field-57a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>18</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">59a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Beneficiary</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No letter option, A, or F</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff019.htm#mt101-19-field-59a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>19</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">70</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Remittance Information</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4*35x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff020.htm#mt101-20-field-70"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>20</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">77B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Regulatory Reporting</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3*35x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff021.htm#mt101-21-field-77b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>21</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">33B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Currency/Original Ordered Amount</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a15d</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff022.htm#mt101-22-field-33b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>22</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">71A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Details of Charges</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff023.htm#mt101-23-field-71a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>23</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">25A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Charges Account</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">/34x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff024.htm#mt101-24-field-25a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>24</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">36</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Exchange Rate</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">12d</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="aff025.htm#mt101-25-field-36"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>25</i></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----| End of Sequence B Transaction Details</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="CENTER" valign="TOP" width="100%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M = Mandatory, O = Optional - Network Validated Rules may apply</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="noprint">
+<p class="footer" align="CENTER"><a href="afb.htm"><img src="pgback.gif" alt="Previous Page"></a>&nbsp;
+<a href="#top"><img src="pgtop.gif" alt="Top Of Page"></a>&nbsp;
+<a href="afd.htm"><img src="pgnext.gif" alt="Next Page"></a> 
+</p>
+</div>
+
+</body>
+</html>
+

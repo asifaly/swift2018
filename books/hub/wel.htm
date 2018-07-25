@@ -1,0 +1,224 @@
+<!doctype html public "-//w3c//dtd html 4.01 transitional//en">
+<html>
+<head>
+<title>SWIFT User Documentation - Welcome</title>
+<meta name="description" content="SWIFT User Documentation - Welcome">
+<meta name="edition" content="December 2017">
+<meta name="publisher" content="S.W.I.F.T. SCRL">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<link href="swiftuhb.css" type="text/css" rel="stylesheet">
+<style type="text/css">
+BODY.BOOK UL LI UL LI {
+	list-style-image : none;
+}
+</style>
+<base target="new">
+</head>
+<body class="book" bgcolor="#ffffff">
+<h2 class="heading">Welcome</h2>
+<p><strong>The Standards Release Guide 2018 (SRG 2018) describes the changes to the Standards MTs effective as of 18 November 2018, the scheduled release date on FIN.</strong></p>
+<p>The main highlights of the SRG 2018 include the following changes:</p>
+<ul>
+	<li>
+		<p>Category 1:</p>
+		<ul>
+			<li><p>MT 103, MT 103 STP, MT 103 REMIT: mandate field 121 Unique End-to-end Transaction Reference (UETR) in header block 3 in <b>all</b> messages. All users of these messages will be impacted, irrespective if they are member of the SWIFT global payment innovation (SWIFT gpi) service or not.<br />
+			In cases where the sender is acting as intermediary and a UETR is present in the received message, the UETR must be passed, unchanged, to the next message in the transaction chain. Otherwise a new UETR must be used. The UETR of an MT 202 COV must be the same as the UETR of the underlying customer credit transfer. For new UETR generation, if the creating application cannot provide field 121 (UETR), then 			<a href="https://www2.swift.com/go/book/bookext051460/pdf" target="_blank">certified FIN interfaces</a> must be able to generate and add a valid random UETR in field 121 in the outbound message. <br />
+			This change will allow members of the SWIFT gpi service to track their payments on the SWIFT network end to end, even if they are being processed by banks that are not part of the SWIFT gpi Closed User Group (CUG).</p></li>
+			<li><p>All category 1: all users must be able to receive header fields 111 (Service Type Identifier) and 121 (Unique End-to-end Transaction Reference). Within the SWIFT global payments innovation (gpi) service, field 121 must be accompanied by field 111. Customers of the SWIFT gpi service can include field 111 and field 121 in messages where the <b>receiver is not a SWIFT gpi customer</b>. To cover (possible) expansion of the SWIFT gpi service, non-gpi customers must be able to receive these fields in all category 1 and category 2 messages. Institutions that are not senders in the SWIFT gpi closed user group (CUG) are not allowed to send or forward field 111.</p></li>
+			<li><p>MT 101, MT 102, MT 102 STP, MT 103, MT 103 STP, MT 103 REMIT, MT 110: a usage rule is added to field 50a and 59a to reference the published Chinese commercial codes (CCC) conversion table when information indicated by Chinese characters is necessary in FIN messages and when use is bilaterally agreed.</p></li>
+		</ul>
+	</li>
+</ul>
+
+<ul>
+	<li>
+		<p>Category 2:</p>
+		<ul>
+			<li><p>
+				MT 202, MT 205, MT 202 COV, MT 205 COV: mandate field 121 Unique End-to-end Transaction Reference (UETR) in the header block 3 in all messages. All users of these messages will be impacted, irrespective if they are member of the SWIFT global payment innovation (SWIFT gpi) service or not.<br />
+				In cases where the sender is acting as intermediary and a UETR is present in the received message, the UETR must be passed, unchanged, to the next message in the transaction chain. Otherwise a new UETR must be used. The UETR of an MT 202 COV must be the same as the UETR of the underlying customer credit transfer. For new UETR generation, if the creating application cannot provide field 121 (UETR), then <a href="https://www2.swift.com/go/book/bookext051460/pdf" target="_blank">certified FIN interfaces</a> must be able to generate and add a valid random UETR in field 121 in the outbound message.
+			</p></li>
+			<li><p>
+				All category 2: all users must be able to receive header fields 111 (Service Type Identifier) and 121 (Unique End-to-end Transaction Reference). Within the SWIFT global payments innovation (gpi) service, field 121 must be accompanied by field 111. Customers of the SWIFT gpi service can include field 111 in messages where the receiver is not a SWIFT gpi customer. To cover (possible) expansion of the SWIFT gpi service, non-gpi customers must be able to receive these fields in all category 1 and category 2 messages. Institutions that are not senders in the SWIFT gpi closed user group (CUG) are not allowed to send or forward field 111.
+			</p></li>
+			<li><p>
+				MT 202, MT 202 COV, MT 203, MT 205, MT 205 COV, MT 210: a usage rule is added to field 58a (and field 50a and 59a where part of the message) to reference the published Chinese commercial codes (CCC) conversion table when information indicated by Chinese characters is necessary in FIN messages and when use is bilaterally agreed.
+			</p></li>
+		</ul>
+	</li>
+</ul>
+
+<ul>
+	<li>
+		<p>Category 3:</p>
+		<ul>
+			<li><p>MT 300, MT 304, MT 305, MT 306, MT 320, MT 330, MT 340, MT 360, MT 361: optional field 34C is added to cover client transparency on commissions and fees: The <i>Markets in Financial Instruments Directive (MiFID II)</i> requires more transparency on costs and charges.</p></li>
+			<li><p>
+				MT 300, MT 304, MT 305, MT 306, MT 320, MT 321,MT 330, MT 340, MT 341,MT 360, MT 361, MT 380, MT 381: optional field 39M is added to indicate a country as payment clearing centre for transacted currencies to make offshore clearing more visible. The field must not be used if the settlement is at the default country.
+			</p></li>
+			<li><p>
+				MT 300, MT 304, MT 305, MT 306: misleading message usage rules corrected that refer to industry requirements to clarify that a FIN confirmation message cannot create a legal agreement between the parties.
+			</p></li>
+			<li><p>
+				MT 304: all fields in sequence D for accounting information are made optional, in order to be able to include commission and fees (field 34B and field 30F) even where other accounting information is not present.
+			</p></li>
+		</ul>
+	</li>
+</ul>
+
+<ul>
+	<li><p>Category 4: no changes</p></li>
+</ul>
+
+<ul>
+	<li><p>Category 5:</p>
+		<p><b>Settlement and Reconciliation:</b></p>
+		<ul>
+			<li><p>MT 536, MT 537, MT 540, MT 541, MT 542, MT 543, MT 544, MT 545, MT 546, MT 547, MT 548, MT 578, MT 586: codes added for investment funds switch orders to be able to distinguish from other type of transactions and to increase usage of redemption funds and subscription funds.
+			</p></li>
+			<li><p>MT 540, MT 541, MT 542, MT 543, MT 544, MT 545, MT 546, MT 547: code for research fees added in the settlement amount to comply with Markets in Financial Instruments Directive (MiFID II) and separate research fees from trading charges.
+			</p></li>
+		</ul>
+
+		<p><b>Trade Initiation and Confirmation:</b></p>
+		<ul>
+			<li><p>MT 513, MT 514, MT 515, MT 518: code for research fees added in the settlement amount to comply with Markets in Financial Instruments Directive (MiFID II) and separate research fees from trading charges.</p></li>
+		</ul>
+
+		<p><b>Corporate Actions:</b></p>
+		<ul>
+			<li><p>New event added and functionalities linked to reporting on withholding tax applied on deemed income or deemed dividend distributions not actually distributed.
+			</p></li>
+			<li><p>Additional price qualifiers added in the notification and a new amount in the status message to enable full STP for instructions on cash amount.
+			</p></li>
+			<li><p>Rate type code added for reporting the exact nature of an income when it originates from a foreign source and is subject to different tax treatments as per the investor resident status.
+			</p></li>
+			<li><p>Limit repeatability of Stock Lending Deadline (BORD) qualifier.
+			</p></li>
+			<li><p>Limit repeatability of Withholding Tax Rate (TAXR) and Second Level Tax (WITL) qualifiers.
+			</p></li>
+			<li><p>Usage rule changed on qualifier DEVI (Declared Rate) to allow the use when that currency and rate is one of the many currency options offered for the event.
+			</p></li>
+			<li><p>Definition changed for qualifier CERT (Certification Deadline Date/Time) to refer more broadly to the deadline by which the certification must be sent.
+			</p></li>
+			<li><p>Unused elements deleted: non-resident rate qualifier NRES and related rate type code IMPU, PREC, and TIER.
+			</p></li>
+		</ul>
+
+		<p><b>Triparty Collateral Management</b></p>
+		<ul>
+			<li><p>No changes</p></li>
+		</ul>
+
+		<p><b>Common to category 5 messages:</b></p>
+		<ul>
+			<li><p>No changes</p></li>
+		</ul>
+	</li>
+</ul>
+
+<ul>
+  <li>
+    <p>Category 6 Commodities:</p>
+    <ul>
+      <li><p>MT 600 and MT 601: misleading message usage rules corrected that refer to industry requirements to clarify that a FIN confirmation message cannot create a legal agreement between the parties.</p></li>
+      <li><p>MT 600 and MT 601: optional field 34C added to cover client transparency on commissions and fees: Markets in Financial Instruments Directive (MiFID II) requires more transparency on costs and charges.</p></li>
+		</ul>
+	</li>
+</ul>
+
+<ul>
+	<li><p>Category 6 Reference Data: no changes</p></li>
+</ul>
+
+<ul>
+	<li>
+		<p>Category 7: for several years, there have been no changes to category 7 in order to bundle them in a big release which will increase STP and fill gaps in transaction flows. In SR 2018, the revamp is focussing on Letters of credit. In SR 2019, the focus will be on Guarantees.</p>
+    <ul>
+      <li><p>3 new messages: MT 708 (continuation message for the MT 707), MT 744 (to notify the receiver that a reimbursement claim appears to be not in accordance with the reimbursement authorisation) and MT 759 (ancillary, structured message to be used only if there is no other appropriate category 7 message and to replace MT 799).
+      	</p></li>
+      <li><p>MT 707: significantly enhanced to be more in line with the MT 700, MT 710, and MT 720, with structured fields for amendment details instead of the few free-format fields that were used in the past.
+      	</p></li>	
+      <li><p>Format of large, free-text fields changed from x-character set to z-character set, which also allows for the use of the special characters = ! " % & * < > ; { @ # _
+      	</p></li>	
+      <li><p>Definitions updated</p></li>
+      <li><p>Usage rules updated</p></li>
+      <li><p>Field names changed</p></li>
+      <li><p>Fields added or removed</p></li>
+      <li><p>Length of fields modified</p></li>
+      <li><p>Codes introduced in fields to improve STP</p></li>
+    </ul>
+	</li>
+</ul>
+<ul>
+	<li><p>Category 8: no changes</p></li>
+</ul>
+<ul>
+	<li><p>Category 9</p>
+	<ul>
+		<li><p>MT 910: a usage rule is added to field 50a to reference the published Chinese commercial codes (CCC) conversion table when information indicated by Chinese characters is necessary in FIN messages and when use is bilaterally agreed.</p></li>
+	</ul>
+	</li>
+</ul>
+
+<ul>
+	<li>
+		<p>Category n:</p>
+		<ul>
+			<li><p>MT n92, MT n96: cancellation reason codes are added to field 79 in MT n92 and response and reason codes to field 76 in MT n96 to enable the introduction of structured codes and alignment with ISO 20022. This will reduce ambiguity and will allow a code-word based, prioritisation workflow. The SWIFT gpi stop and recall service will use these code words.</p></li>
+			<li><p>MT n98: format of field 77E changed from x-character set to z-character set, which also allows for the use of the special characters = ! " % & * < > ; { @ # _ This change has no direct impact on existing agreements between present users of the MT n98. Any changes to existing agreements must be agreed by all parties to the agreement.</p></li>
+		</ul>
+	</li>
+</ul>
+
+<p><strong>BIC implementation</strong></p>
+<p>The ISO 9362 Business Identifier Code (BIC) standard was revised in 2014. A transition period started in January 2015 and will end in November 2018. All users must carefully plan and budget for systems or process changes, if any, to be prepared on time.</p> 
+<p>All details of implementation changes and impact of the revised ISO 9362 BIC standard can be found in the <a href="https://www.swift.com/file/5981/download?token=je3v2pjb" target="_blank" >information paper</a>.
+</p>
+
+<p><strong>REMINDER for SR 2020</strong></p>
+<p>A structured format option is now available for ordering and beneficiary customer fields (50F and 59F). Free format options for these fields will be removed from the following messages in SR 2020:</p>
+
+<table>
+	<tr>
+		<td>MT 101</td>
+		<td>field 50H and field 59 (no letter option)</td>
+	</tr>
+		<tr>
+		<td>MTs 103, 103 STP, 103 REMIT</td>
+		<td>field 50K and field 59 (no letter option)</td>
+	</tr>
+		<tr>
+		<td>MTs 102, 102 STP </td>
+		<td>field 50K and field 59 (no letter option)</td>
+	</tr>
+		<tr>
+		<td>MT 110</td>
+		<td>field 50K and field 59 (no letter option)</td>
+	</tr>
+		<tr>
+		<td>MTs 202 COV, 205 COV </td>
+		<td>field 50K and field 59 (no letter option)</td>
+	</tr>
+	<tr>
+		<td>MT 210</td>
+		<td>field 50K</td>
+	</tr>
+	<tr>
+		<td>MT 910</td>
+		<td>field 50K</td>
+	</tr>
+</table>
+
+<p><strong>Unique end-to-end transaction reference and extended tracking</strong></p>
+<p>With mandating a unique end-to-end transaction reference (UETR) for all MT 103, MT 103 STP, MT 103 REMIT, MT 202, MT 205, MT 202 COV, and MT 205 COV messages, all banks on SWIFT can use such unique reference to identify end-to-end cross-border payments.</p> 
+<p>It will also enable the extended tracking by gpi customers of any gpi transaction that they are party to (this goes beyond the scope of today’s tracking which starts at the first gpi bank and stops with messages sent by the last gpi bank involved in a gpi transaction). gpi customers will be able to use the tracker to track their gpi payment status along the full message chain on SWIFT, irrespective of whether the banks handling the transaction are gpi members. This will allow gpi customers to achieve end-to-end tracking of their gpi payment messages quickly, bringing even greater transparency and cost reduction.</p>
+<p>The UETR is a key enabler for developing a community service for tracking and stopping payments on SWIFT.</p>
+<p>Today, stopping a payment in case of fraud or error is difficult and operationally costly, especially when a request for cancellation has to be passed along multiple banks. As a result, the cancellation process is mostly unsuccessful in "catching up" with the payment and preventing the funds from being credited to the beneficiary account. </p>
+<p>The gpi Stop & Recall service will help eliminate many of these inefficiencies, speeding up the process to increase customer service and enhance risk management.</p>
+SWIFT’s vision is to provide the entire community a set of new services that will help eliminate many of these inefficiencies, speeding up the process to increase customer service and enhance risk management.</p>
+
+<p><strong>Customer Support</strong></p>
+<p>Should you need further clarifications, do not hesitate to contact your <a href="feedback.htm"> Customer Support Centre</a>.</p>
+</body>

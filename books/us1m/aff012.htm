@@ -1,0 +1,552 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ 
+<html>
+<head>
+<title>Standards - Category 1 - MT&#160;101 - 12. Field 23E: Instruction Code</title>
+<link href="mark.css" type="text/css" rel="stylesheet">
+<meta http-equiv="Content-Language" content="EN_UK">
+<meta name="Creator" content="S.W.I.F.T. User Documentation">
+<meta name="Date.Issued" content="22 December 2017">
+<meta name="Description" content="Standards, Standards MT, November 2018, Category 1, Message Reference Guide, Standards Release Guide, MT 101 - 12. Field 23E: Instruction Code">
+<meta name="Format" content="HTML">
+<meta name="Identifier" content="MT101-12-FIELD-23E">
+<meta name="Keywords" content="SWIFT, Standards, Standards MT, Category 1, Customer Payments and Cheques">
+<meta name="Language" content="EN_UK">
+<meta name="Publisher" content="S.W.I.F.T. SCRL">
+<meta name="Relation.IsPartOf" content="Standards - Category 1">
+<meta name="Rights" content="Copyright (c) S.W.I.F.T. SCRL('SWIFT'), avenue Adele 1, B-1310 La Hulpe, Belgium. 22 December 2017. All rights reserved.">
+<meta name="Subject" content="MT 101 - 12. Field 23E: Instruction Code">
+<meta name="Type" content="Field">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var selftitle  = "MT 101 - 12. Field 23E: Instruction Code" ;
+// --></script>
+<meta name="bookid" content="cat1">
+<meta name="productfamily" content="Standards">
+<meta name="productname" content="Standards MT">
+<meta name="productrelease" content="November 2018">
+<meta name="subproductname" content="Category 1 - Customer Payments and Cheques">
+<meta name="subproductrelease" content="">
+<meta name="Book.Context" content="MT 101">
+<meta name="Book.Product" content="Category 1 - Customer Payments and Cheques for Standards MT November 2018">
+<meta name="Book.Title" content="Message Reference Guide - Standards Release Guide">
+<meta name="informationtypes" content="Standards">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var contextStr  = "MT 101 - 12. Field 23E: Instruction Code" ;
+// --></script>
+<meta http-equiv="Content-Type" content="text/html; CHARSET=ISO-8859-1">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var imgCursorOn  = new Image() ;     // the image to show when the cursor is on
+imgCursorOn.src  = 'CURSOR1.GIF';
+var imgCursorOff = new Image() ;     // the image to show when the cursor is off
+imgCursorOff.src = 'CURSOR0.GIF' ;
+function refreshRev() {
+   if (parent!=self && parent.parent != parent.self && parent.parent.frames.length==2 && parent.parent.frames[1]==parent) {
+      if (parent.parent.frames[0].frames.length==0) {
+         if (parent.parent.frames[0].revMax!=null) {
+            parent.parent.frames[0].refreshRevCursor();
+         }
+      }
+      else {
+         if (parent.parent.frames[0].frames.length==2) {
+            if (parent.parent.frames[0].frames[1].revMax!=null) {
+               parent.parent.frames[0].frames[1].refreshRevCursor();
+            }
+         }
+      }
+   }
+}
+// end-of-script --></script>
+<link href="swiftuhb.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/JavaScript" src="uhbdoc.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+var toptitle="Standards - Category 1";
+var linkself="aff012.htm";
+var linkparent="";
+var leaf=true;
+var linkleft="aff011.htm";
+var linkup="";
+var linkright="aff013.htm";
+var linktop="title.htm";
+
+function onLoadUhbDoc() {
+   resyncUhb();
+   refreshRev(); 
+}
+//-->
+</script>
+</head>
+<body onload="onLoadUhbDoc();" class="BOOK"><div class="noprint"><div class="showhidetoc"><a href="javascript:showHideToc();"><img src="hidetoc.gif" name="showhidetoc" alt="Show/Hide TOC"></a></div></div>
+<span class="noprint"><a name="c0"></a>
+</span>
+<a name="mt101-12-field-23e"></a>
+<div class="noprint"><a name="top"></a>
+</div>
+<br>
+
+
+<h2 class="mtfldblock">MT&nbsp;101 Field Specifications</h2>
+
+
+
+<h3>12. Field 23E: Instruction Code</h3>
+
+
+
+<h4 class="fldfmt">FORMAT</h4>
+
+
+<table width="98%" border="0" cellpadding="0">
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="20%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Option E</td>
+
+<td align="LEFT" valign="TOP" width="30%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c[/30x]</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">(Instruction Code)(Additional Information)</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+
+<h4 class="fldprsnc">PRESENCE</h4>
+
+
+<p>Optional in mandatory sequence B
+</p>
+
+<h4 class="flddef">DEFINITION</h4>
+
+
+<p>This field specifies instructions to be used between the ordering customer and the account servicer.
+</p>
+
+<h4 class="fldcodes">CODES</h4>
+
+
+<p>Instruction Code must contain one of the following codes <span class="ecodes">(Error code(s): T47)</span>:
+</p>
+<table width="98%" border="0" cellpadding="5">
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="13%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CHQB</td>
+
+<td align="LEFT" valign="TOP" width="20%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Cheque</td>
+
+<td align="LEFT" valign="TOP" width="67%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Pay beneficiary customer by cheque only. The optional account number line in field 59a must not be used.</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="13%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMSW</td>
+
+<td align="LEFT" valign="TOP" width="20%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sweep the account</td>
+
+<td align="LEFT" valign="TOP" width="67%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">This transaction contains a cash management instruction, requesting to sweep the account of the ordering customer.</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="13%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMTO</td>
+
+<td align="LEFT" valign="TOP" width="20%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Top the account</td>
+
+<td align="LEFT" valign="TOP" width="67%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">This transaction contains a cash management instruction, requesting to top the account of the ordering customer above a certain floor amount. The floor amount, if not pre-agreed by the parties involved, may be specified after the code.</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="13%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMZB</td>
+
+<td align="LEFT" valign="TOP" width="20%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Zero balance the account</td>
+
+<td align="LEFT" valign="TOP" width="67%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">This transaction contains a cash management instruction, requesting to zero balance the account of the ordering customer.</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="13%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CORT</td>
+
+<td align="LEFT" valign="TOP" width="20%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Corporate Trade</td>
+
+<td align="LEFT" valign="TOP" width="67%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Payment is made in settlement of a trade, for example, foreign exchange deal, securities transaction.</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="13%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">EQUI</td>
+
+<td align="LEFT" valign="TOP" width="20%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Equivalent Amount</td>
+
+<td align="LEFT" valign="TOP" width="67%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">This transaction contains an instruction requesting to pay the beneficiary customer an amount in one currency, equivalent to an instructed amount in a different currency.</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="13%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">INTC</td>
+
+<td align="LEFT" valign="TOP" width="20%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intra-Company Payment</td>
+
+<td align="LEFT" valign="TOP" width="67%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A payment between two companies belonging to the same group.</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="13%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">NETS</td>
+
+<td align="LEFT" valign="TOP" width="20%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Net Settlement System</td>
+
+<td align="LEFT" valign="TOP" width="67%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">This transaction contains a payment that should be settled via a net settlement system, if available.</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="13%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">OTHR</td>
+
+<td align="LEFT" valign="TOP" width="20%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Other</td>
+
+<td align="LEFT" valign="TOP" width="67%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Used for bilaterally agreed codes/information. The actual bilateral code/information needs to be specified in Additional Information.</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="13%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">PHON</td>
+
+<td align="LEFT" valign="TOP" width="20%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Telephone</td>
+
+<td align="LEFT" valign="TOP" width="67%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">This transaction requires the beneficiary to be contacted by telephone and should be followed by the appropriate telephone number. This code is meant for the last financial institution in the chain.</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="13%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">REPA</td>
+
+<td align="LEFT" valign="TOP" width="20%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Related Payment</td>
+
+<td align="LEFT" valign="TOP" width="67%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Payment has a related e-Payments reference.</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="13%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">RTGS</td>
+
+<td align="LEFT" valign="TOP" width="20%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">RTGS Payment</td>
+
+<td align="LEFT" valign="TOP" width="67%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">This transaction contains a payment that should be settled via a real time gross settlement system, if available.</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="13%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">URGP</td>
+
+<td align="LEFT" valign="TOP" width="20%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Urgent Payment</td>
+
+<td align="LEFT" valign="TOP" width="67%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">This transaction contains a time-sensitive payment which should be executed in an expeditious manner.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+
+<h4 class="fldvalrls">NETWORK VALIDATED RULES</h4>
+
+
+<p>Additional Information is only allowed when Instruction Code consists of one of the following codes: CMTO, PHON, OTHR and REPA <span class="ecodes">(Error code(s): D66)</span>.
+</p>
+<p>In each occurrence of sequence B: when this field is repeated, the same code word must not be present more than once with the exception of OTHR. The code word OTHR may be repeated <span class="ecodes">(Error code(s): E46)</span>.
+</p>
+<p>In each occurrence of sequence B: when this field is used more than once, the following combinations are not allowed <span class="ecodes">(Error code(s): D67)</span>.
+</p>
+<table width="98%" border="0" cellpadding="5">
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CHQB</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMSW</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CHQB</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMTO</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CHQB</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMZB</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CHQB</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CORT</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CHQB</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">NETS</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CHQB</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">PHON</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CHQB</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">REPA</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CHQB</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">RTGS</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CHQB</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">URGP</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMSW</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMTO</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMSW</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMZB</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMTO</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMZB</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CORT</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMSW</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CORT</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMTO</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CORT</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMZB</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CORT</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">REPA</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">EQUI</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMSW</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">EQUI</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMTO</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">EQUI</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CMZB</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="12%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">NETS</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">with</td>
+
+<td align="LEFT" valign="TOP" width="69%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">RTGS</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+<p>For example:
+</p>
+<table width="98%" border="0" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Valid</th>
+
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Invalid</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><code><img src="cursor0.gif" alt="" name="space" height="10" width="10"> :23E:URGP</code></td>
+
+<td align="LEFT" valign="TOP" width="50%"><code><img src="cursor0.gif" alt="" name="space" height="10" width="10"> :23E:CHQB</code></td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><code><img src="cursor0.gif" alt="" name="space" height="10" width="10"> :23E:CORT</code></td>
+
+<td align="LEFT" valign="TOP" width="50%"><code><img src="cursor0.gif" alt="" name="space" height="10" width="10"> :23E:URGP</code></td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10"><code></code></td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10"><code></code></td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10"><code></code></td>
+
+<td align="LEFT" valign="TOP" width="50%"><code><img src="cursor0.gif" alt="" name="space" height="10" width="10"> :23E:NETS</code></td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10"><code></code></td>
+
+<td align="LEFT" valign="TOP" width="50%"><code><img src="cursor0.gif" alt="" name="space" height="10" width="10"> :23E:RTGS</code></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+
+<h4 class="fldusgrls">USAGE RULES</h4>
+
+
+<p>Code REPA indicates that the payment is the result of an initiation performed via an e-payments product between the customers. This code is intended for the beneficiary's bank who should act according to the specifications of the e-payments product.
+</p>
+<p>The use of EQUI is subject to agreements between the ordering customer and beneficiary customer and between the ordering customer and his account servicing institution.
+</p>
+<p class="stem">To facilitate the receiving bank's processing when multiple codes are used, the codes must appear in the following order:
+</p>
+
+<ul>
+<li>
+<p>instructions for the receiver of the message (CMSW, CMTO, CMZB, INTC, REPA, CORT, URGP)
+</p></li>
+
+<li>
+<p>codes impacting the routing or composition of the resulting payment message (NETS, RTGS)
+</p></li>
+
+<li>
+<p>codes containing instructions for one of the following parties in the transaction chain (CHQB, PHON)
+</p></li>
+
+<li>
+<p>information codes (OTHR)
+</p></li>
+
+</ul>
+
+<div class="noprint">
+<p class="footer" align="CENTER"><a href="aff011.htm"><img src="pgback.gif" alt="Previous Page"></a>&nbsp;
+<a href="#top"><img src="pgtop.gif" alt="Top Of Page"></a>&nbsp;
+<a href="aff013.htm"><img src="pgnext.gif" alt="Next Page"></a> 
+</p>
+</div>
+
+</body>
+</html>
+

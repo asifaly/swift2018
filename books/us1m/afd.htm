@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ 
+<html>
+<head>
+<title>Standards - Category 1 - MT&#160;101 Network Validated Rules</title>
+<link href="mark.css" type="text/css" rel="stylesheet">
+<meta http-equiv="Content-Language" content="EN_UK">
+<meta name="Creator" content="S.W.I.F.T. User Documentation">
+<meta name="Date.Issued" content="22 December 2017">
+<meta name="Description" content="Standards, Standards MT, November 2018, Category 1, Message Reference Guide, Standards Release Guide, MT 101 Network Validated Rules">
+<meta name="Format" content="HTML">
+<meta name="Identifier" content="MT101NVR">
+<meta name="Keywords" content="SWIFT, Standards, Standards MT, Category 1, Customer Payments and Cheques">
+<meta name="Language" content="EN_UK">
+<meta name="Publisher" content="S.W.I.F.T. SCRL">
+<meta name="Relation.IsPartOf" content="Standards - Category 1">
+<meta name="Rights" content="Copyright (c) S.W.I.F.T. SCRL('SWIFT'), avenue Adele 1, B-1310 La Hulpe, Belgium. 22 December 2017. All rights reserved.">
+<meta name="Subject" content="MT 101 Network Validated Rules">
+<meta name="Type" content="NVR">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var selftitle  = "MT 101 Network Validated Rules" ;
+// --></script>
+<meta name="bookid" content="cat1">
+<meta name="productfamily" content="Standards">
+<meta name="productname" content="Standards MT">
+<meta name="productrelease" content="November 2018">
+<meta name="subproductname" content="Category 1 - Customer Payments and Cheques">
+<meta name="subproductrelease" content="">
+<meta name="Book.Context" content="MT 101">
+<meta name="Book.Product" content="Category 1 - Customer Payments and Cheques for Standards MT November 2018">
+<meta name="Book.Title" content="Message Reference Guide - Standards Release Guide">
+<meta name="informationtypes" content="Standards">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var contextStr  = "MT 101 Network Validated Rules" ;
+// --></script>
+<meta http-equiv="Content-Type" content="text/html; CHARSET=ISO-8859-1">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var imgCursorOn  = new Image() ;     // the image to show when the cursor is on
+imgCursorOn.src  = 'CURSOR1.GIF';
+var imgCursorOff = new Image() ;     // the image to show when the cursor is off
+imgCursorOff.src = 'CURSOR0.GIF' ;
+function refreshRev() {
+   if (parent!=self && parent.parent != parent.self && parent.parent.frames.length==2 && parent.parent.frames[1]==parent) {
+      if (parent.parent.frames[0].frames.length==0) {
+         if (parent.parent.frames[0].revMax!=null) {
+            parent.parent.frames[0].refreshRevCursor();
+         }
+      }
+      else {
+         if (parent.parent.frames[0].frames.length==2) {
+            if (parent.parent.frames[0].frames[1].revMax!=null) {
+               parent.parent.frames[0].frames[1].refreshRevCursor();
+            }
+         }
+      }
+   }
+}
+// end-of-script --></script>
+<link href="swiftuhb.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/JavaScript" src="uhbdoc.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+var toptitle="Standards - Category 1";
+var linkself="afd.htm";
+var linkparent="";
+var leaf=true;
+var linkleft="afc.htm";
+var linkup="";
+var linkright="afe.htm";
+var linktop="title.htm";
+
+function onLoadUhbDoc() {
+   resyncUhb();
+   refreshRev(); 
+}
+//-->
+</script>
+</head>
+<body onload="onLoadUhbDoc();" class="BOOK"><div class="noprint"><div class="showhidetoc"><a href="javascript:showHideToc();"><img src="hidetoc.gif" name="showhidetoc" alt="Show/Hide TOC"></a></div></div>
+<span class="noprint"><a name="c0"></a>
+</span>
+<a name="genafd"></a>
+<div class="noprint"><a name="top"></a>
+</div>
+
+
+
+<h2>MT&nbsp;101 Network Validated Rules</h2>
+
+
+<dl>
+<dt><b>C1&nbsp;</b></dt>
+
+<dd>
+<p>If an exchange rate is given in field 36, the corresponding forex deal must be referenced in field 21F <span class="ecodes">(Error code(s): D54)</span>.
+</p>
+<table class="tblinitem" width="90%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sequence B<br><img src="cursor0.gif" alt="" name="space" height="10" width="10">if field 36 is ...</th>
+
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sequence B<br><img src="cursor0.gif" alt="" name="space" height="10" width="10">then field 21F is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Present</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not present</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+</dd>
+
+<dt><b>C2&nbsp;</b></dt>
+
+<dd>
+<p>In each occurrence of sequence B, if field 33B is present and 'amount' in field 32B is not equal to zero, then field 36 must be present, otherwise field 36 is not allowed <span class="ecodes">(Error code(s): D60)</span>.
+</p>
+<table class="tblinitem" width="90%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th colspan="3" align="CENTER" valign="TOP" width="100%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Within the same occurrence of sequence B</th>
+
+</tr>
+
+<tr>
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">If field 33B is ...</th>
+
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">And amount in field 32B is ...</th>
+
+<th align="CENTER" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Then field 36 is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td rowspan="2" align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Present</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Equal to zero</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not equal to zero</td>
+
+<td align="LEFT" valign="TOP" width="67%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not present</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not applicable</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+</dd>
+
+<dt><b>C3&nbsp;</b></dt>
+
+<dd>
+<p>If there is only one debit account, the ordering customer must be identified in field 50a (option F, G or H) in sequence A. Conversely, if multiple debit accounts are used, they must be identified for every transaction in field 50a (option F, G or H) of sequence B.
+</p>
+<p>Consequently, field 50a (option F, G or H), must be present in either sequence A (index 5) or in each occurrence of sequence B (index 15), but must never be present in both sequences, nor be absent from both sequences <span class="ecodes">(Error code(s): D61)</span>.
+</p>
+<table class="tblinitem" width="90%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sequence A<br><img src="cursor0.gif" alt="" name="space" height="10" width="10">if field 50a (option F, G or H) is ...</th>
+
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">In every occurrence of sequence B<br><img src="cursor0.gif" alt="" name="space" height="10" width="10">then field 50a (option F, G or H) is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Present</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not present</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+</dd>
+
+<dt><b>C4&nbsp;</b></dt>
+
+<dd>
+<p>Field 50a (option C or L), may be present in either sequence A (index 4), or in one or more occurrences of sequence B (index 14), but must not be present in both sequences A and B <span class="ecodes">(Error code(s): D62)</span>.
+</p>
+<table class="tblinitem" width="90%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sequence A<br><img src="cursor0.gif" alt="" name="space" height="10" width="10">if field 50a (option C or L) is ...</th>
+
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sequence B<br><img src="cursor0.gif" alt="" name="space" height="10" width="10">then field 50a (option C or L) is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Present</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not present</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional in any occurrence</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+</dd>
+
+<dt><b>C5&nbsp;</b></dt>
+
+<dd>
+<p>If field 33B is present in sequence B, its currency code must be different from the currency code in field 32B in the same occurrence of sequence B <span class="ecodes">(Error code(s): D68)</span>.
+</p>
+<p>Examples:
+</p>
+<table class="tblinitem" width="90%" border="0" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Valid</th>
+
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Invalid</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><code><img src="cursor0.gif" alt="" name="space" height="10" width="10"> :32B:USD1000,<br><img src="cursor0.gif" alt="" name="space" height="10" width="10"> :33B:CHF1200,</code></td>
+
+<td align="LEFT" valign="TOP" width="50%"><code><img src="cursor0.gif" alt="" name="space" height="10" width="10"> :32B:USD1000,00<br><img src="cursor0.gif" alt="" name="space" height="10" width="10"> :33B:USD1000,</code></td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><code><img src="cursor0.gif" alt="" name="space" height="10" width="10"> :32B:CHF1200,<br><img src="cursor0.gif" alt="" name="space" height="10" width="10"> :33B:USD1000,</code></td>
+
+<td align="LEFT" valign="TOP" width="50%"><code><img src="cursor0.gif" alt="" name="space" height="10" width="10"> :32B:CHF1200,<br><img src="cursor0.gif" alt="" name="space" height="10" width="10"> :33B:CHF1000,00</code></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+</dd>
+
+<dt><b>C6&nbsp;</b></dt>
+
+<dd>
+<p>Field 52a may be present in either sequence A or in one or more occurrences of sequence B, but must not be present in both sequences <span class="ecodes">(Error code(s): D64)</span>.
+</p>
+<table class="tblinitem" width="90%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sequence A<br><img src="cursor0.gif" alt="" name="space" height="10" width="10">if field 52a is ...</th>
+
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sequence B<br><img src="cursor0.gif" alt="" name="space" height="10" width="10">then field 52a is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Present</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not present</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+</dd>
+
+<dt><b>C7&nbsp;</b></dt>
+
+<dd>
+<p>If field 56a is present, field 57a must also be present <span class="ecodes">(Error code(s): D65)</span>.
+</p>
+<table class="tblinitem" width="90%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">If field 56a is ...</th>
+
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Then field 57a is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Present</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not present</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+</dd>
+
+<dt><b>C8&nbsp;</b></dt>
+
+<dd>
+<p>If field 21R is present in sequence A, then in each occurrence of sequence B, the currency code in fields 32B must be the same <span class="ecodes">(Error code(s): D98)</span>.
+</p>
+</dd>
+
+<dt><b>C9&nbsp;</b></dt>
+
+<dd>
+<p>In each occurrence of sequence B, the presence of fields 33B and 21F is dependent on the presence and value of fields 32B and 23E as follows <span class="ecodes">(Error code(s): E54)</span>.
+</p>
+<table class="tblinitem" width="90%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th colspan="4" align="CENTER" valign="TOP" width="100%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Within the same occurrence of sequence B</th>
+
+</tr>
+
+<tr>
+<th align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">If amount in field 32B is ...</th>
+
+<th align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">And field 23E is ...</th>
+
+<th align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Then field 33B is ...</th>
+
+<th align="CENTER" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">And field 21F is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td rowspan="3" align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Equal to zero</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Present and code is equal to EQUI</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Present and code is not equal to EQUI</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not present</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not equal to zero</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not applicable</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+<td align="LEFT" valign="TOP" width="25%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+</dd>
+
+</dl>
+
+<div class="noprint">
+<p class="footer" align="CENTER"><a href="afc.htm"><img src="pgback.gif" alt="Previous Page"></a>&nbsp;
+<a href="#top"><img src="pgtop.gif" alt="Top Of Page"></a>&nbsp;
+<a href="afe.htm"><img src="pgnext.gif" alt="Next Page"></a> 
+</p>
+</div>
+
+</body>
+</html>
+

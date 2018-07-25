@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta>
+   <level>public</level>
+   <uhb>true</uhb>
+   <booktitle>Message Reference Guide - Standards Release Guide</booktitle>
+   <abstract>
+      
+<para>
+This reference guide contains the category 9 message text standards, including a detailed description of the scope, the format specifications, the rules, the guidelines, and the field specifications of each message type.</para>
+   </abstract>
+   <description>Standards,Standards MT,November 2018,Category 9 - Cash Management and Customer Status - Message Reference Guide - Standards Release Guide</description>
+   <language>English</language>
+   <pdf>us9m.pdf</pdf>
+   <metadata>
+      <bookinfo>
+         <bookreldate>
+            <day>22</day>
+            <month>December</month>
+            <year>2017</year>
+         </bookreldate>
+         <bookcode>us9m_20171222</bookcode>
+         <bookid>cat9</bookid>
+         <informationtypes>
+            <informationtype>Standards</informationtype>
+         </informationtypes>
+      </bookinfo>
+      <applicability>
+         <psfamily>Standards</psfamily>
+         <psname>Standards MT</psname>
+         <psrelease>November 2018</psrelease>
+         <psvar>Category 9 - Cash Management and Customer Status</psvar>
+      </applicability>
+   </metadata>
+</meta>

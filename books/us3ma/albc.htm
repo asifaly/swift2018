@@ -1,0 +1,1163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ 
+<html>
+<head>
+<title>Standards - Category 3 - MT&#160;330 Format Specifications</title>
+<link href="mark.css" type="text/css" rel="stylesheet">
+<meta http-equiv="Content-Language" content="EN_UK">
+<meta name="Creator" content="S.W.I.F.T. User Documentation">
+<meta name="Date.Issued" content="22 December 2017">
+<meta name="Description" content="Standards, Standards MT, November 2018, Category 3, Message Reference Guide: Volume 1 (MT 300 - MT 341), Standards Release Guide, MT 330 Format Specifications">
+<meta name="Format" content="HTML">
+<meta name="Identifier" content="MT330FormatSpec">
+<meta name="Keywords" content="SWIFT, Standards, Standards MT, Category 3, Treasury Markets - Foreign Exchange, Money Markets and Derivatives">
+<meta name="Language" content="EN_UK">
+<meta name="Publisher" content="S.W.I.F.T. SCRL">
+<meta name="Relation.IsPartOf" content="Standards - Category 3 - Volume 1">
+<meta name="Rights" content="Copyright (c) S.W.I.F.T. SCRL('SWIFT'), avenue Adele 1, B-1310 La Hulpe, Belgium. 22 December 2017. All rights reserved.">
+<meta name="Subject" content="MT 330 Format Specifications">
+<meta name="Type" content="FormatSpec">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var selftitle  = "MT 330 Format Specifications" ;
+// --></script>
+<meta name="bookid" content="cat3v1">
+<meta name="productfamily" content="Standards">
+<meta name="productname" content="Standards MT">
+<meta name="productrelease" content="November 2018">
+<meta name="subproductname" content="Category 3 - Treasury Markets - Foreign Exchange, Money Markets and Derivatives">
+<meta name="subproductrelease" content="">
+<meta name="Book.Context" content="MT 330">
+<meta name="Book.Product" content="Category 3 - Treasury Markets - Foreign Exchange, Money Markets and Derivatives for Standards MT November 2018">
+<meta name="Book.Title" content="Message Reference Guide: Volume 1 (MT 300 - MT 341) - Standards Release Guide">
+<meta name="informationtypes" content="Standards">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var contextStr  = "MT 330 Format Specifications" ;
+// --></script>
+<meta http-equiv="Content-Type" content="text/html; CHARSET=ISO-8859-1">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var imgCursorOn  = new Image() ;     // the image to show when the cursor is on
+imgCursorOn.src  = 'CURSOR1.GIF';
+var imgCursorOff = new Image() ;     // the image to show when the cursor is off
+imgCursorOff.src = 'CURSOR0.GIF' ;
+function refreshRev() {
+   if (parent!=self && parent.parent != parent.self && parent.parent.frames.length==2 && parent.parent.frames[1]==parent) {
+      if (parent.parent.frames[0].frames.length==0) {
+         if (parent.parent.frames[0].revMax!=null) {
+            parent.parent.frames[0].refreshRevCursor();
+         }
+      }
+      else {
+         if (parent.parent.frames[0].frames.length==2) {
+            if (parent.parent.frames[0].frames[1].revMax!=null) {
+               parent.parent.frames[0].frames[1].refreshRevCursor();
+            }
+         }
+      }
+   }
+}
+// end-of-script --></script>
+<link href="swiftuhb.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/JavaScript" src="uhbdoc.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+var toptitle="Standards - Category 3 - Volume 1";
+var linkself="albc.htm";
+var linkparent="";
+var leaf=true;
+var linkleft="albb.htm";
+var linkup="";
+var linkright="albd.htm";
+var linktop="title.htm";
+
+function onLoadUhbDoc() {
+   resyncUhb();
+   refreshRev(); 
+}
+//-->
+</script>
+</head>
+<body onload="onLoadUhbDoc();" class="BOOK"><div class="noprint"><div class="showhidetoc"><a href="javascript:showHideToc();"><img src="hidetoc.gif" name="showhidetoc" alt="Show/Hide TOC"></a></div></div>
+<span class="noprint"><a name="c0"></a>
+</span>
+<a name="genalbc"></a>
+<div class="noprint"><a name="top"></a>
+</div>
+
+
+
+<h2>MT&nbsp;330 Format Specifications</h2>
+
+
+<p class="stem">The MT 330 consists of seven sequences:
+</p>
+
+<ul>
+<li>
+<p>Sequence A General Information contains general information about the call/notice loan/deposit as well as about the confirmation itself.
+</p></li>
+
+<li>
+<p>Sequence B Transaction Details contains information about the transaction.
+</p></li>
+
+<li>
+<p>Sequence C Settlement Instructions for Amounts Payable by Party A provides the instructions for the amounts payable by party A.
+</p></li>
+
+<li>
+<p>Sequence D Settlement Instructions for Amounts Payable by Party B provides the instructions for the amounts payable by party B.
+</p></li>
+
+<li>
+<p>Sequence E Settlement Instructions for Interests Payable by Party A provides the instructions for the interest payable by party A.
+</p></li>
+
+<li>
+<p>Sequence F Settlement Instructions for Interests Payable by Party B provides the instructions for the interest payable by party B.
+</p></li>
+
+<li>
+<p>Sequence G Tax Information contains information about the tax regime.
+</p></li>
+
+<li>
+<p>Sequence H Additional Information provides information which is not match-critical.
+</p></li>
+
+</ul>
+
+
+<table class="formatspec" width="98%" border="1" cellpadding="5"><caption align="LEFT"><b>MT&nbsp;330 Call/Notice Loan/Deposit Confirmation</b></caption>
+
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Status</th>
+
+<th align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Tag</th>
+
+<th align="CENTER" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Field Name</th>
+
+<th align="CENTER" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Content/Options</th>
+
+<th align="CENTER" valign="TOP" width="7%"><i><img src="cursor0.gif" alt="" name="space" height="10" width="10">No.</i></th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory Sequence A General Information</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg001.htm#mt330-1-field-15a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>1</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">20</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sender's Reference</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg002.htm#mt330-2-field-20"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>2</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">21</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Related Reference</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg003.htm#mt330-3-field-21"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>3</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Type of Operation</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg004.htm#mt330-4-field-22a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>4</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">94A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Scope of Operation</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg005.htm#mt330-5-field-94a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>5</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Type of Event</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg006.htm#mt330-6-field-22b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>6</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22C</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Common Reference</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!a2!c4!n4!a2!c</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg007.htm#mt330-7-field-22c"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>7</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">21N</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Contract Number Party A</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg008.htm#mt330-8-field-21n"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>8</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">82a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Party A</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg009.htm#mt330-9-field-82a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>9</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">87a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Party B</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg010.htm#mt330-10-field-87a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>10</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">83a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Fund or Instructing Party</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg011.htm#mt330-11-field-83a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>11</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">77D</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Terms and Conditions</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">6*35x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg012.htm#mt330-12-field-77d"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>12</i></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence A General Information</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory Sequence B Transaction Details</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg013.htm#mt330-13-field-15b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>13</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">17R</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Party A's Role</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg014.htm#mt330-14-field-17r"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>14</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30T</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Trade Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg015.htm#mt330-15-field-30t"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>15</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30V</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Value Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg016.htm#mt330-16-field-30v"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>16</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">38A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Period of Notice</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg017.htm#mt330-17-field-38a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>17</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">32B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Currency and Balance</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a15d</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg018.htm#mt330-18-field-32b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>18</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">32H</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Principal Amount to be Settled</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">[N]3!a15d</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg019.htm#mt330-19-field-32h"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>19</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30X</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Interest Due Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg020.htm#mt330-20-field-30x"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>20</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">34E</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Currency and Interest Amount</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">[N]3!a15d</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg021.htm#mt330-21-field-34e"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>21</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">37G</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Interest Rate</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">[N]12d</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg022.htm#mt330-22-field-37g"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>22</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">14D</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Day Count Fraction</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">7x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg023.htm#mt330-23-field-14d"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>23</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30F</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Last Day of the Next Interest Period</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg024.htm#mt330-24-field-30f"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>24</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">38J</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Number of Days</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a3!n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="albg025.htm#mt330-25-field-38j"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>25</i></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="CENTER" valign="TOP" width="10%"><ins><span id="ES13566.0000.0000" class="inserted"><a name="c1"><img src="cursor0.gif" alt="" name="imgC1" height="10" width="10"></a>O</span></ins>
+</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="6%"><ins><span id="ES13566.0003.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">39M</span></ins>
+</td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="48%"><ins><span id="ES13566.0006.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Payment Clearing Centre</span></ins>
+</td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="29%"><ins><span id="ES13566.0009.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">2!a</span></ins>
+</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg026.htm#mt330-26-field-39m"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><ins><span id="ES13566.0012.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>26</i></span></ins>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence B Transaction Details</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory Sequence C Settlement Instructions for Amounts Payable by Party A</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15C</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg027.htm#mt330-27-field-15c"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1394.0000" class="inserted"><i><a name="c2"><img src="cursor0.gif" alt="" name="imgC2" height="10" width="10"></a>27</i></span></ins>
+<del><span id="ES1391.0000" class="deleted"><i>26</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">53a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Delivery Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg028.htm#mt330-28-field-53a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1427.0000" class="inserted"><i><a name="c3"><img src="cursor0.gif" alt="" name="imgC3" height="10" width="10"></a>28</i></span></ins>
+<del><span id="ES1424.0000" class="deleted"><i>27</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">86a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary 2</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg029.htm#mt330-29-field-86a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1460.0000" class="inserted"><i><a name="c4"><img src="cursor0.gif" alt="" name="imgC4" height="10" width="10"></a>29</i></span></ins>
+<del><span id="ES1457.0000" class="deleted"><i>28</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">56a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg030.htm#mt330-30-field-56a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1492.0000" class="inserted"><i><a name="c5"><img src="cursor0.gif" alt="" name="imgC5" height="10" width="10"></a>30</i></span></ins>
+<del><span id="ES1489.0000" class="deleted"><i>29</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">57a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Receiving Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg031.htm#mt330-31-field-57a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1526.0000" class="inserted"><i><a name="c6"><img src="cursor0.gif" alt="" name="imgC6" height="10" width="10"></a>31</i></span></ins>
+<del><span id="ES1523.0000" class="deleted"><i>30</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">58a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Beneficiary Institution</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg032.htm#mt330-32-field-58a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1557.0000" class="inserted"><i><a name="c7"><img src="cursor0.gif" alt="" name="imgC7" height="10" width="10"></a>32</i></span></ins>
+<del><span id="ES1554.0000" class="deleted"><i>31</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence C Settlement Instructions for Amounts Payable by Party A</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory Sequence D Settlement Instructions for Amounts Payable by Party B</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15D</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg033.htm#mt330-33-field-15d"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1586.0000" class="inserted"><i><a name="c8"><img src="cursor0.gif" alt="" name="imgC8" height="10" width="10"></a>33</i></span></ins>
+<del><span id="ES1583.0000" class="deleted"><i>32</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">53a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Delivery Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg034.htm#mt330-34-field-53a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1619.0000" class="inserted"><i><a name="c9"><img src="cursor0.gif" alt="" name="imgC9" height="10" width="10"></a>34</i></span></ins>
+<del><span id="ES1616.0000" class="deleted"><i>33</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">86a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary 2</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg035.htm#mt330-35-field-86a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1652.0000" class="inserted"><i><a name="c10"><img src="cursor0.gif" alt="" name="imgC10" height="10" width="10"></a>35</i></span></ins>
+<del><span id="ES1649.0000" class="deleted"><i>34</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">56a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg036.htm#mt330-36-field-56a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1684.0000" class="inserted"><i><a name="c11"><img src="cursor0.gif" alt="" name="imgC11" height="10" width="10"></a>36</i></span></ins>
+<del><span id="ES1681.0000" class="deleted"><i>35</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">57a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Receiving Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg037.htm#mt330-37-field-57a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1718.0000" class="inserted"><i><a name="c12"><img src="cursor0.gif" alt="" name="imgC12" height="10" width="10"></a>37</i></span></ins>
+<del><span id="ES1715.0000" class="deleted"><i>36</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">58a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Beneficiary Institution</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg038.htm#mt330-38-field-58a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1749.0000" class="inserted"><i><a name="c13"><img src="cursor0.gif" alt="" name="imgC13" height="10" width="10"></a>38</i></span></ins>
+<del><span id="ES1746.0000" class="deleted"><i>37</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence D Settlement Instructions for Amounts Payable by Party B</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence E Settlement Instructions for Interests Payable by Party A</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15E</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg039.htm#mt330-39-field-15e"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1778.0000" class="inserted"><i><a name="c14"><img src="cursor0.gif" alt="" name="imgC14" height="10" width="10"></a>39</i></span></ins>
+<del><span id="ES1775.0000" class="deleted"><i>38</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">53a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Delivery Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg040.htm#mt330-40-field-53a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1811.0000" class="inserted"><i><a name="c15"><img src="cursor0.gif" alt="" name="imgC15" height="10" width="10"></a>40</i></span></ins>
+<del><span id="ES1808.0000" class="deleted"><i>39</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">86a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary 2</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg041.htm#mt330-41-field-86a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1844.0000" class="inserted"><i><a name="c16"><img src="cursor0.gif" alt="" name="imgC16" height="10" width="10"></a>41</i></span></ins>
+<del><span id="ES1841.0000" class="deleted"><i>40</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">56a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg042.htm#mt330-42-field-56a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1876.0000" class="inserted"><i><a name="c17"><img src="cursor0.gif" alt="" name="imgC17" height="10" width="10"></a>42</i></span></ins>
+<del><span id="ES1873.0000" class="deleted"><i>41</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">57a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Receiving Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg043.htm#mt330-43-field-57a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1910.0000" class="inserted"><i><a name="c18"><img src="cursor0.gif" alt="" name="imgC18" height="10" width="10"></a>43</i></span></ins>
+<del><span id="ES1907.0000" class="deleted"><i>42</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">58a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Beneficiary Institution</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg044.htm#mt330-44-field-58a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1941.0000" class="inserted"><i><a name="c19"><img src="cursor0.gif" alt="" name="imgC19" height="10" width="10"></a>44</i></span></ins>
+<del><span id="ES1938.0000" class="deleted"><i>43</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence E Settlement Instructions for Interests Payable by Party A</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence F Settlement Instructions for Interests Payable by Party B</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15F</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg045.htm#mt330-45-field-15f"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1970.0000" class="inserted"><i><a name="c20"><img src="cursor0.gif" alt="" name="imgC20" height="10" width="10"></a>45</i></span></ins>
+<del><span id="ES1967.0000" class="deleted"><i>44</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">53a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Delivery Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg046.htm#mt330-46-field-53a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES2003.0000" class="inserted"><i><a name="c21"><img src="cursor0.gif" alt="" name="imgC21" height="10" width="10"></a>46</i></span></ins>
+<del><span id="ES2000.0000" class="deleted"><i>45</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">86a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary 2</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg047.htm#mt330-47-field-86a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES2036.0000" class="inserted"><i><a name="c22"><img src="cursor0.gif" alt="" name="imgC22" height="10" width="10"></a>47</i></span></ins>
+<del><span id="ES2033.0000" class="deleted"><i>46</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">56a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg048.htm#mt330-48-field-56a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES2068.0000" class="inserted"><i><a name="c23"><img src="cursor0.gif" alt="" name="imgC23" height="10" width="10"></a>48</i></span></ins>
+<del><span id="ES2065.0000" class="deleted"><i>47</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">57a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Receiving Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg049.htm#mt330-49-field-57a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES2102.0000" class="inserted"><i><a name="c24"><img src="cursor0.gif" alt="" name="imgC24" height="10" width="10"></a>49</i></span></ins>
+<del><span id="ES2099.0000" class="deleted"><i>48</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">58a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Beneficiary Institution</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg050.htm#mt330-50-field-58a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES2133.0000" class="inserted"><i><a name="c25"><img src="cursor0.gif" alt="" name="imgC25" height="10" width="10"></a>50</i></span></ins>
+<del><span id="ES2130.0000" class="deleted"><i>49</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence F Settlement Instructions for Interests Payable by Party B</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence G Tax Information</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15G</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg051.htm#mt330-51-field-15g"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES2162.0000" class="inserted"><i><a name="c26"><img src="cursor0.gif" alt="" name="imgC26" height="10" width="10"></a>51</i></span></ins>
+<del><span id="ES2159.0000" class="deleted"><i>50</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">37L</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Tax Rate</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">12d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg052.htm#mt330-52-field-37l"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES2191.0000" class="inserted"><i><a name="c27"><img src="cursor0.gif" alt="" name="imgC27" height="10" width="10"></a>52</i></span></ins>
+<del><span id="ES2188.0000" class="deleted"><i>51</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">33B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Transaction Currency and Net Interest Amount</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a15d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg053.htm#mt330-53-field-33b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES2224.0000" class="inserted"><i><a name="c28"><img src="cursor0.gif" alt="" name="imgC28" height="10" width="10"></a>53</i></span></ins>
+<del><span id="ES2221.0000" class="deleted"><i>52</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">36</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Exchange Rate</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">12d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg054.htm#mt330-54-field-36"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES2253.0000" class="inserted"><i><a name="c29"><img src="cursor0.gif" alt="" name="imgC29" height="10" width="10"></a>54</i></span></ins>
+<del><span id="ES2250.0000" class="deleted"><i>53</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">33E</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Reporting Currency and Tax Amount</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a15d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg055.htm#mt330-55-field-33e"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES2285.0000" class="inserted"><i><a name="c30"><img src="cursor0.gif" alt="" name="imgC30" height="10" width="10"></a>55</i></span></ins>
+<del><span id="ES2282.0000" class="deleted"><i>54</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence G Tax Information</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence H Additional Information</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15H</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg056.htm#mt330-56-field-15h"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES2314.0000" class="inserted"><i><a name="c31"><img src="cursor0.gif" alt="" name="imgC31" height="10" width="10"></a>56</i></span></ins>
+<del><span id="ES2311.0000" class="deleted"><i>55</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">29A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Contact Information</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4*35x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg057.htm#mt330-57-field-29a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES2344.0000" class="inserted"><i><a name="c32"><img src="cursor0.gif" alt="" name="imgC32" height="10" width="10"></a>57</i></span></ins>
+<del><span id="ES2341.0000" class="deleted"><i>56</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">24D</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Dealing Method</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c[/35x]</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg058.htm#mt330-58-field-24d"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES2373.0000" class="inserted"><i><a name="c33"><img src="cursor0.gif" alt="" name="imgC33" height="10" width="10"></a>58</i></span></ins>
+<del><span id="ES2370.0000" class="deleted"><i>57</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">84a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Dealing Branch Party A</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, B, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg059.htm#mt330-59-field-84a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES2406.0000" class="inserted"><i><a name="c34"><img src="cursor0.gif" alt="" name="imgC34" height="10" width="10"></a>59</i></span></ins>
+<del><span id="ES2403.0000" class="deleted"><i>58</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">85a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Dealing Branch Party B</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, B, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg060.htm#mt330-60-field-85a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES2439.0000" class="inserted"><i><a name="c35"><img src="cursor0.gif" alt="" name="imgC35" height="10" width="10"></a>60</i></span></ins>
+<del><span id="ES2436.0000" class="deleted"><i>59</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">26H</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Counterparty's Reference</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg061.htm#mt330-61-field-26h"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES2467.0000" class="inserted"><i><a name="c36"><img src="cursor0.gif" alt="" name="imgC36" height="10" width="10"></a>61</i></span></ins>
+<del><span id="ES2464.0000" class="deleted"><i>60</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" colspan="5" align="LEFT" valign="TOP" width="100%"><ins><span id="ES13567.0000.0000" class="inserted"><b><a name="c37"><img src="cursor0.gif" alt="" name="imgC37" height="10" width="10"></a>-----> </b></span></ins>
+</td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="CENTER" valign="TOP" width="10%"><ins><span id="ES13568.0000.0000" class="inserted"><a name="c38"><img src="cursor0.gif" alt="" name="imgC38" height="10" width="10"></a>O</span></ins>
+</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="6%"><ins><span id="ES13568.0003.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">34C</span></ins>
+</td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="48%"><ins><span id="ES13568.0006.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Commission and Fees</span></ins>
+</td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="29%"><ins><span id="ES13568.0009.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c/[N]3!a15d</span></ins>
+</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg062.htm#mt330-62-field-34c"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><ins><span id="ES13568.0012.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>62</i></span></ins>
+</td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" colspan="5" align="LEFT" valign="TOP" width="100%"><ins><span id="ES13569.0000.0000" class="inserted"><b><a name="c39"><img src="cursor0.gif" alt="" name="imgC39" height="10" width="10"></a>-----| </b></span></ins>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">72</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sender to Receiver Information</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">6*35x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="albg063.htm#mt330-63-field-72"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES2499.0000" class="inserted"><i><a name="c40"><img src="cursor0.gif" alt="" name="imgC40" height="10" width="10"></a>63</i></span></ins>
+<del><span id="ES2496.0000" class="deleted"><i>61</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence H Additional Information</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="CENTER" valign="TOP" width="100%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M = Mandatory, O = Optional - Network Validated Rules may apply</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="noprint">
+<p class="footer" align="CENTER"><a href="albb.htm"><img src="pgback.gif" alt="Previous Page"></a>&nbsp;
+<a href="#top"><img src="pgtop.gif" alt="Top Of Page"></a>&nbsp;
+<a href="albd.htm"><img src="pgnext.gif" alt="Next Page"></a> 
+</p>
+</div>
+
+</body>
+</html>
+

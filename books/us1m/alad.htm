@@ -1,0 +1,729 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ 
+<html>
+<head>
+<title>Standards - Category 1 - MT&#160;103 STP Network Validated Rules</title>
+<link href="mark.css" type="text/css" rel="stylesheet">
+<meta http-equiv="Content-Language" content="EN_UK">
+<meta name="Creator" content="S.W.I.F.T. User Documentation">
+<meta name="Date.Issued" content="22 December 2017">
+<meta name="Description" content="Standards, Standards MT, November 2018, Category 1, Message Reference Guide, Standards Release Guide, MT 103 STP Network Validated Rules">
+<meta name="Format" content="HTML">
+<meta name="Identifier" content="MT103STPNVR">
+<meta name="Keywords" content="SWIFT, Standards, Standards MT, Category 1, Customer Payments and Cheques">
+<meta name="Language" content="EN_UK">
+<meta name="Publisher" content="S.W.I.F.T. SCRL">
+<meta name="Relation.IsPartOf" content="Standards - Category 1">
+<meta name="Rights" content="Copyright (c) S.W.I.F.T. SCRL('SWIFT'), avenue Adele 1, B-1310 La Hulpe, Belgium. 22 December 2017. All rights reserved.">
+<meta name="Subject" content="MT 103 STP Network Validated Rules">
+<meta name="Type" content="NVR">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var selftitle  = "MT 103 STP Network Validated Rules" ;
+// --></script>
+<meta name="bookid" content="cat1">
+<meta name="productfamily" content="Standards">
+<meta name="productname" content="Standards MT">
+<meta name="productrelease" content="November 2018">
+<meta name="subproductname" content="Category 1 - Customer Payments and Cheques">
+<meta name="subproductrelease" content="">
+<meta name="Book.Context" content="MT 103STP">
+<meta name="Book.Product" content="Category 1 - Customer Payments and Cheques for Standards MT November 2018">
+<meta name="Book.Title" content="Message Reference Guide - Standards Release Guide">
+<meta name="informationtypes" content="Standards">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var contextStr  = "MT 103 STP Network Validated Rules" ;
+// --></script>
+<meta http-equiv="Content-Type" content="text/html; CHARSET=ISO-8859-1">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var imgCursorOn  = new Image() ;     // the image to show when the cursor is on
+imgCursorOn.src  = 'CURSOR1.GIF';
+var imgCursorOff = new Image() ;     // the image to show when the cursor is off
+imgCursorOff.src = 'CURSOR0.GIF' ;
+function refreshRev() {
+   if (parent!=self && parent.parent != parent.self && parent.parent.frames.length==2 && parent.parent.frames[1]==parent) {
+      if (parent.parent.frames[0].frames.length==0) {
+         if (parent.parent.frames[0].revMax!=null) {
+            parent.parent.frames[0].refreshRevCursor();
+         }
+      }
+      else {
+         if (parent.parent.frames[0].frames.length==2) {
+            if (parent.parent.frames[0].frames[1].revMax!=null) {
+               parent.parent.frames[0].frames[1].refreshRevCursor();
+            }
+         }
+      }
+   }
+}
+// end-of-script --></script>
+<link href="swiftuhb.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/JavaScript" src="uhbdoc.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+var toptitle="Standards - Category 1";
+var linkself="alad.htm";
+var linkparent="";
+var leaf=true;
+var linkleft="alac.htm";
+var linkup="";
+var linkright="alae.htm";
+var linktop="title.htm";
+
+function onLoadUhbDoc() {
+   resyncUhb();
+   refreshRev(); 
+}
+//-->
+</script>
+</head>
+<body onload="onLoadUhbDoc();" class="BOOK"><div class="noprint"><div class="showhidetoc"><a href="javascript:showHideToc();"><img src="hidetoc.gif" name="showhidetoc" alt="Show/Hide TOC"></a></div></div>
+<span class="noprint"><a name="c0"></a>
+</span>
+<a name="genalad"></a>
+<div class="noprint"><a name="top"></a>
+</div>
+
+
+
+<h2>MT&nbsp;103 STP Network Validated Rules</h2>
+
+
+<dl>
+<dt><b>C1&nbsp;</b></dt>
+
+<dd>
+<p>If field 33B is present and the currency code is different from the currency code in field 32A, field 36 must be present, otherwise field 36 is not allowed <span class="ecodes">(Error code(s): D75)</span>.
+</p>
+<table class="tblinitem" width="90%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">If field 33B is ...</th>
+
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">And currency code in field 33B is ...</th>
+
+<th align="CENTER" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Then field 36 is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td rowspan="2" align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Present</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not equal to currency code in field 32A</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Equal to currency code in field 32A</td>
+
+<td align="LEFT" valign="TOP" width="67%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not present</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not applicable</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+</dd>
+
+<dt><b>C2&nbsp;</b></dt>
+
+<dd>
+<p>If the country codes of the Sender's and the Receiver's BICs are within the following list: AD, AT, BE, BG, BV, CH, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GF, GI, GP, GR, HU, IE, IS, IT, LI, LT, LU, LV, MC, MQ, MT, NL, NO, PL, PM, PT, RE, RO, SE, SI, SJ, SK, SM, TF and VA, then field 33B is mandatory, otherwise field 33B is optional <span class="ecodes">(Error code(s): D49)</span>.
+</p>
+<table class="tblinitem" width="90%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">If country code of Sender's BIC equals one of the listed country codes</th>
+
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">And country code of Receiver's BIC equals one of the listed country codes</th>
+
+<th align="CENTER" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Then field 33B is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="itemnote"><b><i>Note:</i></b>&nbsp;See also Network Validated Rule C8 <span class="ecodes">(Error code(s): D51)</span>.
+</p>
+</dd>
+
+<dt><b>C3&nbsp;</b></dt>
+
+<dd>
+<p>If field 23B contains the code SPRI, field 23E may contain only the codes SDVA or INTC <span class="ecodes">(Error code(s): E01)</span>.
+</p>
+<p>If field 23B contains one of the codes SSTD or SPAY, field 23E must not be used <span class="ecodes">(Error code(s): E02)</span>.
+</p>
+<table class="tblinitem" width="90%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">If field 23B is ...</th>
+
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Then field 23E is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">SPRI</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional. It may contain only SDVA or INTC</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">SSTD</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">SPAY</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not equal to SPRI, SSTD and SPAY</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+</dd>
+
+<dt><b>C4&nbsp;</b></dt>
+
+<dd>
+<p>If field 55A is present, both fields 53A and 54A must also be present <span class="ecodes">(Error code(s): E06)</span>.
+</p>
+<table class="tblinitem" width="90%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">If field 55A is ...</th>
+
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Then field 53A is ...</th>
+
+<th align="CENTER" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">And field 54A is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Present</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not present</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+</dd>
+
+<dt><b>C5&nbsp;</b></dt>
+
+<dd>
+<p>If field 56A is present, field 57A must also be present <span class="ecodes">(Error code(s): C81)</span>.
+</p>
+<table class="tblinitem" width="90%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">If field 56A is ...</th>
+
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Then field 57A is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Present</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not present</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+</dd>
+
+<dt><b>C6&nbsp;</b></dt>
+
+<dd>
+<p>If field 23B contains the code SPRI, field 56A must not be present <span class="ecodes">(Error code(s): E16)</span>.
+</p>
+<table class="tblinitem" width="90%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">If field 23B is ...</th>
+
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Then field 56A is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">SPRI</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">SSTD or SPAY</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+</dd>
+
+<dt><b>C7&nbsp;</b></dt>
+
+<dd>
+<p>If field 71A contains OUR, then field 71F is not allowed and field 71G is optional <span class="ecodes">(Error code(s): E13)</span>.
+</p>
+<table class="tblinitem" width="90%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">If field 71A is ...</th>
+
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Then field 71F is ...</th>
+
+<th align="CENTER" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">And field 71G is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">OUR</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+<p>If field 71A contains SHA, then field(s) 71F is(are) optional and field 71G is not allowed <span class="ecodes">(Error code(s): D50)</span>.
+</p>
+<table class="tblinitem" width="90%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">If field 71A is ...</th>
+
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Then field 71F is ...</th>
+
+<th align="CENTER" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">And field 71G is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">SHA</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+<p>If field 71A contains BEN, then at least one occurrence of field 71F is mandatory and field 71G is not allowed <span class="ecodes">(Error code(s): E15)</span>.
+</p>
+<table class="tblinitem" width="90%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">If field 71A is ...</th>
+
+<th align="CENTER" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Then field 71F is ...</th>
+
+<th align="CENTER" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">And field 71G is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">BEN</td>
+
+<td align="LEFT" valign="TOP" width="33%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory (at least one occurrence)</td>
+
+<td align="LEFT" valign="TOP" width="34%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not allowed</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+</dd>
+
+<dt><b>C8&nbsp;</b></dt>
+
+<dd>
+<p>If either field 71F (at least one occurrence) or field 71G is present, then field 33B is mandatory, otherwise field 33B is optional <span class="ecodes">(Error code(s): D51)</span>.
+</p>
+<p>Note 1: The presence of both fields 71F and 71G is also regulated by the Network Validated Rule C7 <span class="ecodes">(Error code(s): E13,D50,E15)</span>.
+</p>
+<p>Note 2: The presence of field 33B is also regulated by the Network Validated Rule C2 <span class="ecodes">(Error code(s): D49)</span>.
+</p>
+</dd>
+
+<dt><b>C9&nbsp;</b></dt>
+
+<dd>
+<p>The currency code in the fields 71G and 32A must be the same <span class="ecodes">(Error code(s): C02)</span>.
+</p>
+</dd>
+
+<dt><b>C10&nbsp;</b></dt>
+
+<dd>
+<p class="stem">If the country codes of the Sender's and the Receiver's BICs are within the following list: AD, AT, BE, BG, BV, CH, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GF, GI, GP, GR, HR, HU, IE, IL, IS, IT, LI, LT, LU, LV, MC, MQ, MT, NL, NO, PL, PM, PT, RE, RO, SE, SI, SJ, SK, SM, TF and VA, then the following apply:
+</p>
+
+<ul>
+<li>
+<p>If field 57A is not present, the IBAN (ISO 13616) is mandatory in subfield Account of field 59a <span class="ecodes">(Error code(s): D19)</span>.
+</p></li>
+
+<li>
+<p>If field 57A is present and the country code of the financial institution BIC in 57A is within the above list of country codes, the IBAN (ISO 13616) is mandatory in subfield Account of field 59a <span class="ecodes">(Error code(s): D19)</span>.
+</p></li>
+
+</ul>
+
+
+<p>In all other cases, the presence of the IBAN (ISO 13616) is optional and its format is not validated in subfield Account of field 59a.
+</p>
+<p>All ISO 13616-compliant, country-specific IBAN formats can be found in the IBAN Registry document on www.swift.com > Standards > Document Centre.
+</p>
+<table class="tblinitem" width="90%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">If country code of Sender's BIC equals one of the listed country codes</th>
+
+<th align="CENTER" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">And country code of Receiver's BIC equals one of the listed country codes</th>
+
+<th align="CENTER" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">And field 57A is present</th>
+
+<th align="CENTER" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">And country code of field 57A equals one of the listed country codes</th>
+
+<th align="CENTER" valign="TOP" width="24%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Then an IBAN in subfield Account of field 59a is ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not applicable</td>
+
+<td align="LEFT" valign="TOP" width="24%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not applicable</td>
+
+<td align="LEFT" valign="TOP" width="24%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not applicable</td>
+
+<td align="LEFT" valign="TOP" width="24%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Not applicable</td>
+
+<td align="LEFT" valign="TOP" width="24%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="24%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="24%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="24%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="24%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="24%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="24%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="24%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Yes</td>
+
+<td align="LEFT" valign="TOP" width="19%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">No</td>
+
+<td align="LEFT" valign="TOP" width="24%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+<p class="spacer">
+</p>
+</dd>
+
+</dl>
+
+<div class="noprint">
+<p class="footer" align="CENTER"><a href="alac.htm"><img src="pgback.gif" alt="Previous Page"></a>&nbsp;
+<a href="#top"><img src="pgtop.gif" alt="Top Of Page"></a>&nbsp;
+<a href="alae.htm"><img src="pgnext.gif" alt="Next Page"></a> 
+</p>
+</div>
+
+</body>
+</html>
+

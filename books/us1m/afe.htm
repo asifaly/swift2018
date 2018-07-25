@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ 
+<html>
+<head>
+<title>Standards - Category 1 - MT&#160;101 Usage Rules</title>
+<link href="mark.css" type="text/css" rel="stylesheet">
+<meta http-equiv="Content-Language" content="EN_UK">
+<meta name="Creator" content="S.W.I.F.T. User Documentation">
+<meta name="Date.Issued" content="22 December 2017">
+<meta name="Description" content="Standards, Standards MT, November 2018, Category 1, Message Reference Guide, Standards Release Guide, MT 101 Usage Rules">
+<meta name="Format" content="HTML">
+<meta name="Identifier" content="MT101UsageRules">
+<meta name="Keywords" content="SWIFT, Standards, Standards MT, Category 1, Customer Payments and Cheques">
+<meta name="Language" content="EN_UK">
+<meta name="Publisher" content="S.W.I.F.T. SCRL">
+<meta name="Relation.IsPartOf" content="Standards - Category 1">
+<meta name="Rights" content="Copyright (c) S.W.I.F.T. SCRL('SWIFT'), avenue Adele 1, B-1310 La Hulpe, Belgium. 22 December 2017. All rights reserved.">
+<meta name="Subject" content="MT 101 Usage Rules">
+<meta name="Type" content="UsageRules">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var selftitle  = "MT 101 Usage Rules" ;
+// --></script>
+<meta name="bookid" content="cat1">
+<meta name="productfamily" content="Standards">
+<meta name="productname" content="Standards MT">
+<meta name="productrelease" content="November 2018">
+<meta name="subproductname" content="Category 1 - Customer Payments and Cheques">
+<meta name="subproductrelease" content="">
+<meta name="Book.Context" content="MT 101">
+<meta name="Book.Product" content="Category 1 - Customer Payments and Cheques for Standards MT November 2018">
+<meta name="Book.Title" content="Message Reference Guide - Standards Release Guide">
+<meta name="informationtypes" content="Standards">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var contextStr  = "MT 101 Usage Rules" ;
+// --></script>
+<meta http-equiv="Content-Type" content="text/html; CHARSET=ISO-8859-1">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var imgCursorOn  = new Image() ;     // the image to show when the cursor is on
+imgCursorOn.src  = 'CURSOR1.GIF';
+var imgCursorOff = new Image() ;     // the image to show when the cursor is off
+imgCursorOff.src = 'CURSOR0.GIF' ;
+function refreshRev() {
+   if (parent!=self && parent.parent != parent.self && parent.parent.frames.length==2 && parent.parent.frames[1]==parent) {
+      if (parent.parent.frames[0].frames.length==0) {
+         if (parent.parent.frames[0].revMax!=null) {
+            parent.parent.frames[0].refreshRevCursor();
+         }
+      }
+      else {
+         if (parent.parent.frames[0].frames.length==2) {
+            if (parent.parent.frames[0].frames[1].revMax!=null) {
+               parent.parent.frames[0].frames[1].refreshRevCursor();
+            }
+         }
+      }
+   }
+}
+// end-of-script --></script>
+<link href="swiftuhb.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/JavaScript" src="uhbdoc.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+var toptitle="Standards - Category 1";
+var linkself="afe.htm";
+var linkparent="";
+var leaf=true;
+var linkleft="afd.htm";
+var linkup="";
+var linkright="aff001.htm";
+var linktop="title.htm";
+
+function onLoadUhbDoc() {
+   resyncUhb();
+   refreshRev(); 
+}
+//-->
+</script>
+</head>
+<body onload="onLoadUhbDoc();" class="BOOK"><div class="noprint"><div class="showhidetoc"><a href="javascript:showHideToc();"><img src="hidetoc.gif" name="showhidetoc" alt="Show/Hide TOC"></a></div></div>
+<span class="noprint"><a name="c0"></a>
+</span>
+<a name="genafe"></a>
+<div class="noprint"><a name="top"></a>
+</div>
+
+
+
+<h2>MT&nbsp;101 Usage Rules</h2>
+
+
+
+<ul>
+<li>
+<p>If field 21R is present in sequence A, and field 28D indicates that more than one message is chained for this request for transfer instruction, the currency code must be the same for all occurrences of field 32B in sequence B of all chained messages.
+</p></li>
+
+<li>
+<p>In case of an equivalent amount transfer, identified with the code EQUI in field 23E, the transaction amount in field 32B must equal zero.
+</p></li>
+
+<li>
+<p>In case of sweeping, topping or zero balancing operations, identified with a code in field 23E, the transaction amount in field 32B can equal zero.
+</p></li>
+
+<li>
+<p>In case field 28D indicates that messages are chained, all messages belonging to the same chain must have exactly the same sender's reference in field 20.
+</p></li>
+
+<li>
+<p>In case field 28D indicates that messages are chained, sequence A must be repeated and be identical for all messages belonging to the same chain.
+</p></li>
+
+<li>
+<p class="stem">When the currency of the settlement amount is in euro and it is necessary to indicate the equivalent in National Currency Denomination, the following guideline applies:
+</p>
+
+<ul>
+<li>
+<p>field 32B contains the euro amount, to be executed by the receiver;
+</p></li>
+
+<li>
+<p>field 33B contains the currency and value of the instructed amount that is the NCD amount, equivalent to field 32B;
+</p></li>
+
+<li>
+<p>field 36 (due to network validated rule 2) contains the fixed conversion rate between the euro and the National Denomination Currency amounts;
+</p></li>
+
+<li>
+<p>field 21F (due to network validated rule 1) contains the value "NONREF".
+</p></li>
+
+</ul>
+</li>
+
+</ul>
+
+
+<p>
+</p>
+<p>The complete chain of parties and the transaction flow is illustrated by the following figure:
+</p>
+<div class="DIAGRAM">
+<p class="PIMG"><img src="d0010016.gif" alt="D0010016" border="0">
+</p>
+</div>
+
+
+<p>The parties mentioned in the chain are not necessarily different entities. The first column of the table below shows the parties that can be omitted in an MT 101. The second column specifies the party which assumes the role of the party in the first column, when it is not present:
+</p>
+<table width="98%" border="1" cellpadding="5">
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">If the following party is missing ...</th>
+
+<th align="CENTER" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Its function is assumed by ...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Instructing party</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Ordering customer</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Account servicing institution</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Receiver</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Account with institution</td>
+
+</tr>
+
+<tr>
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Account with institution</td>
+
+<td align="LEFT" valign="TOP" width="50%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Receiver</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="noprint">
+<p class="footer" align="CENTER"><a href="afd.htm"><img src="pgback.gif" alt="Previous Page"></a>&nbsp;
+<a href="#top"><img src="pgtop.gif" alt="Top Of Page"></a>&nbsp;
+<a href="aff001.htm"><img src="pgnext.gif" alt="Next Page"></a> 
+</p>
+</div>
+
+</body>
+</html>
+

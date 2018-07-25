@@ -1,0 +1,537 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ 
+<html>
+<head>
+<title>Standards - Category 3 - MT&#160;341 - 57. Field 34C: Commission and Fees</title>
+<link href="mark.css" type="text/css" rel="stylesheet">
+<meta http-equiv="Content-Language" content="EN_UK">
+<meta name="Creator" content="S.W.I.F.T. User Documentation">
+<meta name="Date.Issued" content="22 December 2017">
+<meta name="Description" content="Standards, Standards MT, November 2018, Category 3, Message Reference Guide: Volume 1 (MT 300 - MT 341), Standards Release Guide, MT 341 - 57. Field 34C: Commission and Fees">
+<meta name="Format" content="HTML">
+<meta name="Identifier" content="MT341-57-FIELD-34C">
+<meta name="Keywords" content="SWIFT, Standards, Standards MT, Category 3, Treasury Markets - Foreign Exchange, Money Markets and Derivatives">
+<meta name="Language" content="EN_UK">
+<meta name="Publisher" content="S.W.I.F.T. SCRL">
+<meta name="Relation.IsPartOf" content="Standards - Category 3 - Volume 1">
+<meta name="Rights" content="Copyright (c) S.W.I.F.T. SCRL('SWIFT'), avenue Adele 1, B-1310 La Hulpe, Belgium. 22 December 2017. All rights reserved.">
+<meta name="Subject" content="MT 341 - 57. Field 34C: Commission and Fees">
+<meta name="Type" content="Field">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var selftitle  = "MT 341 - 57. Field 34C: Commission and Fees" ;
+// --></script>
+<meta name="bookid" content="cat3v1">
+<meta name="productfamily" content="Standards">
+<meta name="productname" content="Standards MT">
+<meta name="productrelease" content="November 2018">
+<meta name="subproductname" content="Category 3 - Treasury Markets - Foreign Exchange, Money Markets and Derivatives">
+<meta name="subproductrelease" content="">
+<meta name="Book.Context" content="MT 341">
+<meta name="Book.Product" content="Category 3 - Treasury Markets - Foreign Exchange, Money Markets and Derivatives for Standards MT November 2018">
+<meta name="Book.Title" content="Message Reference Guide: Volume 1 (MT 300 - MT 341) - Standards Release Guide">
+<meta name="informationtypes" content="Standards">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var contextStr  = "MT 341 - 57. Field 34C: Commission and Fees" ;
+// --></script>
+<meta http-equiv="Content-Type" content="text/html; CHARSET=ISO-8859-1">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var imgCursorOn  = new Image() ;     // the image to show when the cursor is on
+imgCursorOn.src  = 'CURSOR1.GIF';
+var imgCursorOff = new Image() ;     // the image to show when the cursor is off
+imgCursorOff.src = 'CURSOR0.GIF' ;
+function refreshRev() {
+   if (parent!=self && parent.parent != parent.self && parent.parent.frames.length==2 && parent.parent.frames[1]==parent) {
+      if (parent.parent.frames[0].frames.length==0) {
+         if (parent.parent.frames[0].revMax!=null) {
+            parent.parent.frames[0].refreshRevCursor();
+         }
+      }
+      else {
+         if (parent.parent.frames[0].frames.length==2) {
+            if (parent.parent.frames[0].frames[1].revMax!=null) {
+               parent.parent.frames[0].frames[1].refreshRevCursor();
+            }
+         }
+      }
+   }
+}
+// end-of-script --></script>
+<link href="swiftuhb.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/JavaScript" src="uhbdoc.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+var toptitle="Standards - Category 3 - Volume 1";
+var linkself="aldg057.htm";
+var linkparent="";
+var leaf=true;
+var linkleft="aldg056.htm";
+var linkup="";
+var linkright="aldg058.htm";
+var linktop="title.htm";
+
+function onLoadUhbDoc() {
+   resyncUhb();
+   refreshRev(); 
+}
+//-->
+</script>
+</head>
+<body onload="onLoadUhbDoc();" class="BOOK"><div class="noprint"><div class="showhidetoc"><a href="javascript:showHideToc();"><img src="hidetoc.gif" name="showhidetoc" alt="Show/Hide TOC"></a></div></div>
+<span class="noprint"><a name="c0"></a>
+</span>
+<a name="mt341-57-field-34c"></a>
+<div class="noprint"><a name="top"></a>
+</div>
+<ins><div id="ES15661" class="inserted">
+
+<h2 class="mtfldblock"><span class="INSERTED"><a name="c1"><img src="cursor0.gif" alt="" name="imgC1" height="10" width="10"></a>MT&nbsp;341 Field Specifications</span></h2>
+
+
+
+<h3><span class="INSERTED">57. Field 34C: Commission and Fees</span></h3>
+
+
+
+<h4 class="fldfmt"><span class="INSERTED">FORMAT</span></h4>
+
+
+<table width="98%" border="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="20%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Option C</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="30%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c/[N]3!a15d</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="50%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">(Commission Type)(Sign)(Currency/Percent)(Amount/Rate)</span></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+
+<h4 class="fldprsnc"><span class="INSERTED">PRESENCE</span></h4>
+
+
+<p><span class="INSERTED">Optional in optional sequence D</span>
+</p>
+
+<h4 class="flddef"><span class="INSERTED">DEFINITION</span></h4>
+
+
+<p><span class="INSERTED">This field specifies the type of the commission and either the currency and amount of the commission or the rate (percentage) which is used to calculate the amount.</span>
+</p>
+
+<h4 class="fldcodes"><span class="INSERTED">CODES</span></h4>
+
+
+<p><span class="INSERTED">Commission Type may contain one of the following codes:</span>
+</p>
+<table width="98%" border="0" cellpadding="5">
+<tbody>
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">ACCA</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Accrued Capitalisation</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">ACRU</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Accrued Interest Amount</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">AKTI</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Aktiengewinn</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">ANTO</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Net Gain/Loss Amount</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">BAKL</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Backload Fees Amount</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CBCH</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Correspondent Bank Charges</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CHAR</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Charges/Fees</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">COAX</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Consumption Tax</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">COUN</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Country, National, Federal Tax</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">CREB</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Rebate/Bonification</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">DEAL</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Trade Amount</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">DSCA</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Discount Amount</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">ENTF</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Entrance Fees Amount</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">EQUL</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Equalisation/Depreciation Deposit</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">ERFE</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Early Redemption Fee Amount</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">EUTR</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">EU Tax Retention Amount</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">EXEC</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Executing Broker's Commission</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">HDGE</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Hedging cost</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">ISDI</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Issue Discount/Allowance</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">LADT</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Local Tax (Country specific 1)</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">LEVY</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Payment Levy Tax</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">LIDT</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Local Tax (Country specific 2)</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">LOCL</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Local Tax</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">LOCO</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Local Broker's Commission</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">LOTE</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Local Tax (Country specific 3)</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">LYDT</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Local Tax (Country specific 4)</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">MACO</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Matching/Confirmation Fee</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">MARG</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Margin Amount</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">OCMT</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Original Currency Amount</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">OTHR</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Other Amount</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">OTMG</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">On top Margin</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">PRDF</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Difference in Price</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">PRMA</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Premium Amount</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">PRWI</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Partial Redemption Withholding Amount</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">REFD</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Expected Refund</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">REGF</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Regulatory Fees</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">REMU</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Remuneration Amount</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">RESU</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Resulting Amount</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">RSCH</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Research fees</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">SAMG</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sales Margin</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">SETT</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Settlement Amount</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">SHIP</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Shipping Amount</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">SPCN</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Special Concessions</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">STAM</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Stamp Duty</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">STEX</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Stock Exchange Tax</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">SUBS</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Subscription Interest</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">TOTL</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Total value of all commissions</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">TRAN</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Transfer Tax</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">TRAX</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Transaction Tax</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">VATA</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Value-Added Tax</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">WITH</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Withholding Tax</span></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="LEFT" valign="TOP" width="13%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">ZWIS</span></td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="87%"><span class="INSERTED"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Zwischengewinn</span></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+
+<h4 class="fldvalrls"><span class="INSERTED">NETWORK VALIDATED RULES</span></h4>
+
+
+<p><span class="INSERTED">Currency/Percent must be a valid ISO 4217 currency code or the code PCT <span class="ecodes"><span class="INSERTED">(Error code(s): T52)</span></span>.</span>
+</p>
+<p><span class="INSERTED">The integer part of Amount/Rate must contain at least one digit. A decimal comma is mandatory and is included in the maximum length. The number of digits following the comma must not exceed the maximum number allowed for the specified currency <span class="ecodes"><span class="INSERTED">(Error code(s): C03,T40,T43)</span></span>.</span>
+</p>
+<p><span class="INSERTED">If Amount/Rate is zero, Sign must not be present <span class="ecodes"><span class="INSERTED">(Error code(s): T14)</span></span>.</span>
+</p>
+
+<h4 class="fldusgrls"><span class="INSERTED">USAGE RULES</span></h4>
+
+
+<p><span class="INSERTED">This field is used to report details of fees, expenses and commissions. This field is not intended to be used to instruct separate settlement of these charges, as this is typically incorporated within other settlement fields in the message.</span>
+</p>
+<p><span class="INSERTED">The field may be repeated, in order to provide a breakdown of charges. The code TOTL may be used on its own, or in addition to other codes, to report the total charges related to the trade.</span>
+</p>
+<p><span class="INSERTED">If a charge is negative, Sign must be present.</span>
+</p>
+</div>
+</ins>
+<div class="noprint">
+<p class="footer" align="CENTER"><a href="aldg056.htm"><img src="pgback.gif" alt="Previous Page"></a>&nbsp;
+<a href="#top"><img src="pgtop.gif" alt="Top Of Page"></a>&nbsp;
+<a href="aldg058.htm"><img src="pgnext.gif" alt="Next Page"></a> 
+</p>
+</div>
+
+</body>
+</html>
+

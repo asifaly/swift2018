@@ -1,0 +1,1352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ 
+<html>
+<head>
+<title>Standards - Category 3 - MT&#160;320 Format Specifications</title>
+<link href="mark.css" type="text/css" rel="stylesheet">
+<meta http-equiv="Content-Language" content="EN_UK">
+<meta name="Creator" content="S.W.I.F.T. User Documentation">
+<meta name="Date.Issued" content="22 December 2017">
+<meta name="Description" content="Standards, Standards MT, November 2018, Category 3, Message Reference Guide: Volume 1 (MT 300 - MT 341), Standards Release Guide, MT 320 Format Specifications">
+<meta name="Format" content="HTML">
+<meta name="Identifier" content="MT320FormatSpec">
+<meta name="Keywords" content="SWIFT, Standards, Standards MT, Category 3, Treasury Markets - Foreign Exchange, Money Markets and Derivatives">
+<meta name="Language" content="EN_UK">
+<meta name="Publisher" content="S.W.I.F.T. SCRL">
+<meta name="Relation.IsPartOf" content="Standards - Category 3 - Volume 1">
+<meta name="Rights" content="Copyright (c) S.W.I.F.T. SCRL('SWIFT'), avenue Adele 1, B-1310 La Hulpe, Belgium. 22 December 2017. All rights reserved.">
+<meta name="Subject" content="MT 320 Format Specifications">
+<meta name="Type" content="FormatSpec">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var selftitle  = "MT 320 Format Specifications" ;
+// --></script>
+<meta name="bookid" content="cat3v1">
+<meta name="productfamily" content="Standards">
+<meta name="productname" content="Standards MT">
+<meta name="productrelease" content="November 2018">
+<meta name="subproductname" content="Category 3 - Treasury Markets - Foreign Exchange, Money Markets and Derivatives">
+<meta name="subproductrelease" content="">
+<meta name="Book.Context" content="MT 320">
+<meta name="Book.Product" content="Category 3 - Treasury Markets - Foreign Exchange, Money Markets and Derivatives for Standards MT November 2018">
+<meta name="Book.Title" content="Message Reference Guide: Volume 1 (MT 300 - MT 341) - Standards Release Guide">
+<meta name="informationtypes" content="Standards">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var contextStr  = "MT 320 Format Specifications" ;
+// --></script>
+<meta http-equiv="Content-Type" content="text/html; CHARSET=ISO-8859-1">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var imgCursorOn  = new Image() ;     // the image to show when the cursor is on
+imgCursorOn.src  = 'CURSOR1.GIF';
+var imgCursorOff = new Image() ;     // the image to show when the cursor is off
+imgCursorOff.src = 'CURSOR0.GIF' ;
+function refreshRev() {
+   if (parent!=self && parent.parent != parent.self && parent.parent.frames.length==2 && parent.parent.frames[1]==parent) {
+      if (parent.parent.frames[0].frames.length==0) {
+         if (parent.parent.frames[0].revMax!=null) {
+            parent.parent.frames[0].refreshRevCursor();
+         }
+      }
+      else {
+         if (parent.parent.frames[0].frames.length==2) {
+            if (parent.parent.frames[0].frames[1].revMax!=null) {
+               parent.parent.frames[0].frames[1].refreshRevCursor();
+            }
+         }
+      }
+   }
+}
+// end-of-script --></script>
+<link href="swiftuhb.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/JavaScript" src="uhbdoc.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+var toptitle="Standards - Category 3 - Volume 1";
+var linkself="ajc.htm";
+var linkparent="";
+var leaf=true;
+var linkleft="ajb.htm";
+var linkup="";
+var linkright="ajd.htm";
+var linktop="title.htm";
+
+function onLoadUhbDoc() {
+   resyncUhb();
+   refreshRev(); 
+}
+//-->
+</script>
+</head>
+<body onload="onLoadUhbDoc();" class="BOOK"><div class="noprint"><div class="showhidetoc"><a href="javascript:showHideToc();"><img src="hidetoc.gif" name="showhidetoc" alt="Show/Hide TOC"></a></div></div>
+<span class="noprint"><a name="c0"></a>
+</span>
+<a name="genajc"></a>
+<div class="noprint"><a name="top"></a>
+</div>
+
+
+
+<h2>MT&nbsp;320 Format Specifications</h2>
+
+
+<p class="stem">The MT 320 consists of nine sequences:
+</p>
+
+<ul>
+<li>
+<p>Sequence A General Information contains general information about the fixed loan/deposit as well as about the confirmation itself.
+</p></li>
+
+<li>
+<p>Sequence B Transaction Details contains information about the transaction.
+</p></li>
+
+<li>
+<p>Sequence C Settlement Instructions for Amounts Payable by Party A provides the instructions for the amounts payable by party A.
+</p></li>
+
+<li>
+<p>Sequence D Settlement Instructions for Amounts Payable by Party B provides the instructions for the amounts payable by party B.
+</p></li>
+
+<li>
+<p>Sequence E Settlement Instructions for Interests Payable by Party A provides the instructions for the interest payable by party A.
+</p></li>
+
+<li>
+<p>Sequence F Settlement Instructions for Interests Payable by Party B provides the instructions for the interest payable by party B.
+</p></li>
+
+<li>
+<p>Sequence G Tax Information contains information about the tax regime.
+</p></li>
+
+<li>
+<p>Sequence H Additional Information provides information, which is not match-critical.
+</p></li>
+
+<li>
+<p>Sequence I Additional Amounts provides information on additional fees
+</p></li>
+
+</ul>
+
+
+<table class="formatspec" width="98%" border="1" cellpadding="5"><caption align="LEFT"><b>MT&nbsp;320 Fixed Loan/Deposit Confirmation</b></caption>
+
+<thead>
+<tr>
+<th align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Status</th>
+
+<th align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Tag</th>
+
+<th align="CENTER" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Field Name</th>
+
+<th align="CENTER" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Content/Options</th>
+
+<th align="CENTER" valign="TOP" width="7%"><i><img src="cursor0.gif" alt="" name="space" height="10" width="10">No.</i></th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory Sequence A General Information</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg001.htm#mt320-1-field-15a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>1</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">20</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sender's Reference</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg002.htm#mt320-2-field-20"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>2</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">21</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Related Reference</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg003.htm#mt320-3-field-21"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>3</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Type of Operation</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg004.htm#mt320-4-field-22a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>4</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">94A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Scope of Operation</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg005.htm#mt320-5-field-94a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>5</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Type of Event</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg006.htm#mt320-6-field-22b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>6</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">22C</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Common Reference</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!a2!c4!n4!a2!c</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg007.htm#mt320-7-field-22c"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>7</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">21N</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Contract Number Party A</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg008.htm#mt320-8-field-21n"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>8</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">82a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Party A</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg009.htm#mt320-9-field-82a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>9</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">87a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Party B</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg010.htm#mt320-10-field-87a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>10</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">83a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Fund or Instructing Party</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg011.htm#mt320-11-field-83a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>11</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">77D</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Terms and Conditions</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">6*35x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg012.htm#mt320-12-field-77d"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>12</i></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence A General Information</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory Sequence B Transaction Details</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg013.htm#mt320-13-field-15b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>13</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">17R</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Party A's Role</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg014.htm#mt320-14-field-17r"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>14</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30T</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Trade Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg015.htm#mt320-15-field-30t"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>15</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30V</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Value Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg016.htm#mt320-16-field-30v"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>16</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30P</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Maturity Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg017.htm#mt320-17-field-30p"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>17</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">32B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Currency and Principal Amount</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a15d</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg018.htm#mt320-18-field-32b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>18</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">32H</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Amount to be Settled</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">[N]3!a15d</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg019.htm#mt320-19-field-32h"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>19</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30X</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Next Interest Due Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg020.htm#mt320-20-field-30x"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>20</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">34E</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Currency and Interest Amount</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">[N]3!a15d</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg021.htm#mt320-21-field-34e"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>21</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">37G</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Interest Rate</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">[N]12d</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg022.htm#mt320-22-field-37g"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>22</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">14D</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Day Count Fraction</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">7x</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg023.htm#mt320-23-field-14d"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>23</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30F</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Last Day of the First Interest Period</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg024.htm#mt320-24-field-30f"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>24</i></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">38J</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Number of Days</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">1!a3!n</td>
+
+<td align="CENTER" valign="TOP" width="7%"><a href="ajg025.htm#mt320-25-field-38j"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>25</i></td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="CENTER" valign="TOP" width="10%"><ins><span id="ES13038.0000.0000" class="inserted"><a name="c1"><img src="cursor0.gif" alt="" name="imgC1" height="10" width="10"></a>O</span></ins>
+</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="6%"><ins><span id="ES13038.0003.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">39M</span></ins>
+</td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="48%"><ins><span id="ES13038.0006.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Payment Clearing Centre</span></ins>
+</td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="29%"><ins><span id="ES13038.0009.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">2!a</span></ins>
+</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg026.htm#mt320-26-field-39m"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><ins><span id="ES13038.0012.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>26</i></span></ins>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence B Transaction Details</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory Sequence C Settlement Instructions for Amounts Payable by Party A</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15C</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg027.htm#mt320-27-field-15c"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES24148.0000" class="inserted"><i><a name="c2"><img src="cursor0.gif" alt="" name="imgC2" height="10" width="10"></a>27</i></span></ins>
+<del><span id="ES24145.0000" class="deleted"><i>26</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">53a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Delivery Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg028.htm#mt320-28-field-53a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES24181.0000" class="inserted"><i><a name="c3"><img src="cursor0.gif" alt="" name="imgC3" height="10" width="10"></a>28</i></span></ins>
+<del><span id="ES24178.0000" class="deleted"><i>27</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">86a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary 2</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg029.htm#mt320-29-field-86a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES24214.0000" class="inserted"><i><a name="c4"><img src="cursor0.gif" alt="" name="imgC4" height="10" width="10"></a>29</i></span></ins>
+<del><span id="ES24211.0000" class="deleted"><i>28</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">56a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg030.htm#mt320-30-field-56a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES24270.0000" class="inserted"><i><a name="c5"><img src="cursor0.gif" alt="" name="imgC5" height="10" width="10"></a>30</i></span></ins>
+<del><span id="ES24267.0000" class="deleted"><i>29</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">57a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Receiving Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg031.htm#mt320-31-field-57a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES24304.0000" class="inserted"><i><a name="c6"><img src="cursor0.gif" alt="" name="imgC6" height="10" width="10"></a>31</i></span></ins>
+<del><span id="ES24301.0000" class="deleted"><i>30</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">58a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Beneficiary Institution</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg032.htm#mt320-32-field-58a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES24335.0000" class="inserted"><i><a name="c7"><img src="cursor0.gif" alt="" name="imgC7" height="10" width="10"></a>32</i></span></ins>
+<del><span id="ES24332.0000" class="deleted"><i>31</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence C Settlement Instructions for Amounts Payable by Party A</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Mandatory Sequence D Settlement Instructions for Amounts Payable by Party B</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15D</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg033.htm#mt320-33-field-15d"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES24364.0000" class="inserted"><i><a name="c8"><img src="cursor0.gif" alt="" name="imgC8" height="10" width="10"></a>33</i></span></ins>
+<del><span id="ES24361.0000" class="deleted"><i>32</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">53a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Delivery Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg034.htm#mt320-34-field-53a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES67.0000" class="inserted"><i><a name="c9"><img src="cursor0.gif" alt="" name="imgC9" height="10" width="10"></a>34</i></span></ins>
+<del><span id="ES64.0000" class="deleted"><i>33</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">86a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary 2</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg035.htm#mt320-35-field-86a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES100.0000" class="inserted"><i><a name="c10"><img src="cursor0.gif" alt="" name="imgC10" height="10" width="10"></a>35</i></span></ins>
+<del><span id="ES97.0000" class="deleted"><i>34</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">56a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg036.htm#mt320-36-field-56a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES132.0000" class="inserted"><i><a name="c11"><img src="cursor0.gif" alt="" name="imgC11" height="10" width="10"></a>36</i></span></ins>
+<del><span id="ES129.0000" class="deleted"><i>35</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">57a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Receiving Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg037.htm#mt320-37-field-57a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES166.0000" class="inserted"><i><a name="c12"><img src="cursor0.gif" alt="" name="imgC12" height="10" width="10"></a>37</i></span></ins>
+<del><span id="ES163.0000" class="deleted"><i>36</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">58a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Beneficiary Institution</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg038.htm#mt320-38-field-58a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES197.0000" class="inserted"><i><a name="c13"><img src="cursor0.gif" alt="" name="imgC13" height="10" width="10"></a>38</i></span></ins>
+<del><span id="ES194.0000" class="deleted"><i>37</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence D Settlement Instructions for Amounts Payable by Party B</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence E Settlement Instructions for Interests Payable by Party A</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15E</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg039.htm#mt320-39-field-15e"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES248.0000" class="inserted"><i><a name="c14"><img src="cursor0.gif" alt="" name="imgC14" height="10" width="10"></a>39</i></span></ins>
+<del><span id="ES245.0000" class="deleted"><i>38</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">53a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Delivery Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg040.htm#mt320-40-field-53a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES281.0000" class="inserted"><i><a name="c15"><img src="cursor0.gif" alt="" name="imgC15" height="10" width="10"></a>40</i></span></ins>
+<del><span id="ES278.0000" class="deleted"><i>39</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">86a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary 2</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg041.htm#mt320-41-field-86a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES314.0000" class="inserted"><i><a name="c16"><img src="cursor0.gif" alt="" name="imgC16" height="10" width="10"></a>41</i></span></ins>
+<del><span id="ES311.0000" class="deleted"><i>40</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">56a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg042.htm#mt320-42-field-56a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES346.0000" class="inserted"><i><a name="c17"><img src="cursor0.gif" alt="" name="imgC17" height="10" width="10"></a>42</i></span></ins>
+<del><span id="ES343.0000" class="deleted"><i>41</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">57a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Receiving Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg043.htm#mt320-43-field-57a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES380.0000" class="inserted"><i><a name="c18"><img src="cursor0.gif" alt="" name="imgC18" height="10" width="10"></a>43</i></span></ins>
+<del><span id="ES377.0000" class="deleted"><i>42</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">58a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Beneficiary Institution</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg044.htm#mt320-44-field-58a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES411.0000" class="inserted"><i><a name="c19"><img src="cursor0.gif" alt="" name="imgC19" height="10" width="10"></a>44</i></span></ins>
+<del><span id="ES408.0000" class="deleted"><i>43</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence E Settlement Instructions for Interests Payable by Party A</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence F Settlement Instructions for Interests Payable by Party B</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15F</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg045.htm#mt320-45-field-15f"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES440.0000" class="inserted"><i><a name="c20"><img src="cursor0.gif" alt="" name="imgC20" height="10" width="10"></a>45</i></span></ins>
+<del><span id="ES437.0000" class="deleted"><i>44</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">53a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Delivery Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg046.htm#mt320-46-field-53a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES473.0000" class="inserted"><i><a name="c21"><img src="cursor0.gif" alt="" name="imgC21" height="10" width="10"></a>46</i></span></ins>
+<del><span id="ES470.0000" class="deleted"><i>45</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">86a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary 2</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg047.htm#mt320-47-field-86a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES538.0000" class="inserted"><i><a name="c22"><img src="cursor0.gif" alt="" name="imgC22" height="10" width="10"></a>47</i></span></ins>
+<del><span id="ES535.0000" class="deleted"><i>46</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">56a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg048.htm#mt320-48-field-56a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES570.0000" class="inserted"><i><a name="c23"><img src="cursor0.gif" alt="" name="imgC23" height="10" width="10"></a>48</i></span></ins>
+<del><span id="ES567.0000" class="deleted"><i>47</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">57a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Receiving Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg049.htm#mt320-49-field-57a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES604.0000" class="inserted"><i><a name="c24"><img src="cursor0.gif" alt="" name="imgC24" height="10" width="10"></a>49</i></span></ins>
+<del><span id="ES601.0000" class="deleted"><i>48</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">58a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Beneficiary Institution</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg050.htm#mt320-50-field-58a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES635.0000" class="inserted"><i><a name="c25"><img src="cursor0.gif" alt="" name="imgC25" height="10" width="10"></a>50</i></span></ins>
+<del><span id="ES632.0000" class="deleted"><i>49</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence F Settlement Instructions for Interests Payable by Party B</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence G Tax Information</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15G</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg051.htm#mt320-51-field-15g"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES686.0000" class="inserted"><i><a name="c26"><img src="cursor0.gif" alt="" name="imgC26" height="10" width="10"></a>51</i></span></ins>
+<del><span id="ES683.0000" class="deleted"><i>50</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">37L</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Tax Rate</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">12d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg052.htm#mt320-52-field-37l"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES715.0000" class="inserted"><i><a name="c27"><img src="cursor0.gif" alt="" name="imgC27" height="10" width="10"></a>52</i></span></ins>
+<del><span id="ES712.0000" class="deleted"><i>51</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">33B</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Transaction Currency and Net Interest Amount</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a15d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg053.htm#mt320-53-field-33b"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES748.0000" class="inserted"><i><a name="c28"><img src="cursor0.gif" alt="" name="imgC28" height="10" width="10"></a>53</i></span></ins>
+<del><span id="ES745.0000" class="deleted"><i>52</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">36</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Exchange Rate</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">12d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg054.htm#mt320-54-field-36"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES777.0000" class="inserted"><i><a name="c29"><img src="cursor0.gif" alt="" name="imgC29" height="10" width="10"></a>54</i></span></ins>
+<del><span id="ES774.0000" class="deleted"><i>53</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">33E</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Reporting Currency and Tax Amount</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a15d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg055.htm#mt320-55-field-33e"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES809.0000" class="inserted"><i><a name="c30"><img src="cursor0.gif" alt="" name="imgC30" height="10" width="10"></a>55</i></span></ins>
+<del><span id="ES806.0000" class="deleted"><i>54</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence G Tax Information</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence H Additional Information</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15H</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg056.htm#mt320-56-field-15h"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES838.0000" class="inserted"><i><a name="c31"><img src="cursor0.gif" alt="" name="imgC31" height="10" width="10"></a>56</i></span></ins>
+<del><span id="ES835.0000" class="deleted"><i>55</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">29A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Contact Information</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4*35x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg057.htm#mt320-57-field-29a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES868.0000" class="inserted"><i><a name="c32"><img src="cursor0.gif" alt="" name="imgC32" height="10" width="10"></a>57</i></span></ins>
+<del><span id="ES865.0000" class="deleted"><i>56</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">24D</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Dealing Method</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c[/35x]</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg058.htm#mt320-58-field-24d"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES898.0000" class="inserted"><i><a name="c33"><img src="cursor0.gif" alt="" name="imgC33" height="10" width="10"></a>58</i></span></ins>
+<del><span id="ES895.0000" class="deleted"><i>57</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">84a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Dealing Branch Party A</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, B, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg059.htm#mt320-59-field-84a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES931.0000" class="inserted"><i><a name="c34"><img src="cursor0.gif" alt="" name="imgC34" height="10" width="10"></a>59</i></span></ins>
+<del><span id="ES928.0000" class="deleted"><i>58</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">85a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Dealing Branch Party B</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, B, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg060.htm#mt320-60-field-85a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES964.0000" class="inserted"><i><a name="c35"><img src="cursor0.gif" alt="" name="imgC35" height="10" width="10"></a>60</i></span></ins>
+<del><span id="ES961.0000" class="deleted"><i>59</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">88a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Broker Identification</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg061.htm#mt320-61-field-88a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES995.0000" class="inserted"><i><a name="c36"><img src="cursor0.gif" alt="" name="imgC36" height="10" width="10"></a>61</i></span></ins>
+<del><span id="ES992.0000" class="deleted"><i>60</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">71F</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Broker's Commission</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">3!a15d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg062.htm#mt320-62-field-71f"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1024.0000" class="inserted"><i><a name="c37"><img src="cursor0.gif" alt="" name="imgC37" height="10" width="10"></a>62</i></span></ins>
+<del><span id="ES1021.0000" class="deleted"><i>61</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">26H</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Counterparty's Reference</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg063.htm#mt320-63-field-26h"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1052.0000" class="inserted"><i><a name="c38"><img src="cursor0.gif" alt="" name="imgC38" height="10" width="10"></a>63</i></span></ins>
+<del><span id="ES1049.0000" class="deleted"><i>62</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">21G</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Broker's Reference</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">16x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg064.htm#mt320-64-field-21g"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1081.0000" class="inserted"><i><a name="c39"><img src="cursor0.gif" alt="" name="imgC39" height="10" width="10"></a>64</i></span></ins>
+<del><span id="ES1078.0000" class="deleted"><i>63</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" colspan="5" align="LEFT" valign="TOP" width="100%"><ins><span id="ES13039.0000.0000" class="inserted"><b><a name="c40"><img src="cursor0.gif" alt="" name="imgC40" height="10" width="10"></a>-----> </b></span></ins>
+</td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" align="CENTER" valign="TOP" width="10%"><ins><span id="ES13040.0000.0000" class="inserted"><a name="c41"><img src="cursor0.gif" alt="" name="imgC41" height="10" width="10"></a>O</span></ins>
+</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="6%"><ins><span id="ES13040.0003.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">34C</span></ins>
+</td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="48%"><ins><span id="ES13040.0006.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Commission and Fees</span></ins>
+</td>
+
+<td class="cellupdated" align="LEFT" valign="TOP" width="29%"><ins><span id="ES13040.0009.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">4!c/[N]3!a15d</span></ins>
+</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg065.htm#mt320-65-field-34c"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a><ins><span id="ES13040.0012.0000" class="inserted"><img src="cursor0.gif" alt="" name="space" height="10" width="10">&nbsp;<i>65</i></span></ins>
+</td>
+
+</tr>
+
+<tr>
+<td class="cellupdated" colspan="5" align="LEFT" valign="TOP" width="100%"><ins><span id="ES13041.0000.0000" class="inserted"><b><a name="c42"><img src="cursor0.gif" alt="" name="imgC42" height="10" width="10"></a>-----| </b></span></ins>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">72</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Sender to Receiver Information</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">6*35x</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg066.htm#mt320-66-field-72"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1113.0000" class="inserted"><i><a name="c43"><img src="cursor0.gif" alt="" name="imgC43" height="10" width="10"></a>66</i></span></ins>
+<del><span id="ES1110.0000" class="deleted"><i>64</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence H Additional Information</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">Optional Sequence I Additional Amounts</b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">15I</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">New Sequence</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Empty field</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg067.htm#mt320-67-field-15i"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1142.0000" class="inserted"><i><a name="c44"><img src="cursor0.gif" alt="" name="imgC44" height="10" width="10"></a>67</i></span></ins>
+<del><span id="ES1139.0000" class="deleted"><i>65</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">18A</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Number of Repetitions</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">5n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg068.htm#mt320-68-field-18a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1172.0000" class="inserted"><i><a name="c45"><img src="cursor0.gif" alt="" name="imgC45" height="10" width="10"></a>68</i></span></ins>
+<del><span id="ES1169.0000" class="deleted"><i>66</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----> </b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">30F</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Payment Date</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">8!n</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg069.htm#mt320-69-field-30f"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1201.0000" class="inserted"><i><a name="c46"><img src="cursor0.gif" alt="" name="imgC46" height="10" width="10"></a>69</i></span></ins>
+<del><span id="ES1198.0000" class="deleted"><i>67</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">32H</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Currency, Payment Amount</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">[N]3!a15d</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg070.htm#mt320-70-field-32h"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1233.0000" class="inserted"><i><a name="c47"><img src="cursor0.gif" alt="" name="imgC47" height="10" width="10"></a>70</i></span></ins>
+<del><span id="ES1230.0000" class="deleted"><i>68</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">-----| </b></td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">53a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Delivery Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg071.htm#mt320-71-field-53a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1266.0000" class="inserted"><i><a name="c48"><img src="cursor0.gif" alt="" name="imgC48" height="10" width="10"></a>71</i></span></ins>
+<del><span id="ES1263.0000" class="deleted"><i>69</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">86a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary 2</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg072.htm#mt320-72-field-86a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1299.0000" class="inserted"><i><a name="c49"><img src="cursor0.gif" alt="" name="imgC49" height="10" width="10"></a>72</i></span></ins>
+<del><span id="ES1296.0000" class="deleted"><i>70</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">O</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">56a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Intermediary</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg073.htm#mt320-73-field-56a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1331.0000" class="inserted"><i><a name="c50"><img src="cursor0.gif" alt="" name="imgC50" height="10" width="10"></a>73</i></span></ins>
+<del><span id="ES1328.0000" class="deleted"><i>71</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td align="CENTER" valign="TOP" width="10%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M</td>
+
+<td align="CENTER" valign="TOP" width="6%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">57a</td>
+
+<td align="LEFT" valign="TOP" width="48%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Receiving Agent</td>
+
+<td align="LEFT" valign="TOP" width="29%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">A, D, or J</td>
+
+<td class="cellupdated" align="CENTER" valign="TOP" width="7%"><a href="ajg074.htm#mt320-74-field-57a"><img src="see_def.gif" alt="See specification" height="14" width="14" border="0"></a> <ins><span id="ES1365.0000" class="inserted"><i><a name="c51"><img src="cursor0.gif" alt="" name="imgC51" height="10" width="10"></a>74</i></span></ins>
+<del><span id="ES1362.0000" class="deleted"><i>72</i></span></del>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="LEFT" valign="TOP" width="100%"><b><img src="cursor0.gif" alt="" name="space" height="10" width="10">End of Sequence I Additional Amounts</b></td>
+
+</tr>
+
+<tr>
+<td colspan="5" align="CENTER" valign="TOP" width="100%"><img src="cursor0.gif" alt="" name="space" height="10" width="10">M = Mandatory, O = Optional - Network Validated Rules may apply</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="noprint">
+<p class="footer" align="CENTER"><a href="ajb.htm"><img src="pgback.gif" alt="Previous Page"></a>&nbsp;
+<a href="#top"><img src="pgtop.gif" alt="Top Of Page"></a>&nbsp;
+<a href="ajd.htm"><img src="pgnext.gif" alt="Next Page"></a> 
+</p>
+</div>
+
+</body>
+</html>
+

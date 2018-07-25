@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ 
+<html>
+<head>
+<title>Standards - Category 1 - MT&#160;101 Mapping</title>
+<link href="mark.css" type="text/css" rel="stylesheet">
+<meta http-equiv="Content-Language" content="EN_UK">
+<meta name="Creator" content="S.W.I.F.T. User Documentation">
+<meta name="Date.Issued" content="22 December 2017">
+<meta name="Description" content="Standards, Standards MT, November 2018, Category 1, Message Reference Guide, Standards Release Guide, MT 101 Mapping">
+<meta name="Format" content="HTML">
+<meta name="Identifier" content="MT101Mapping">
+<meta name="Keywords" content="SWIFT, Standards, Standards MT, Category 1, Customer Payments and Cheques">
+<meta name="Language" content="EN_UK">
+<meta name="Publisher" content="S.W.I.F.T. SCRL">
+<meta name="Relation.IsPartOf" content="Standards - Category 1">
+<meta name="Rights" content="Copyright (c) S.W.I.F.T. SCRL('SWIFT'), avenue Adele 1, B-1310 La Hulpe, Belgium. 22 December 2017. All rights reserved.">
+<meta name="Subject" content="MT 101 Mapping">
+<meta name="Type" content="Mapping">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var selftitle  = "MT 101 Mapping" ;
+// --></script>
+<meta name="bookid" content="cat1">
+<meta name="productfamily" content="Standards">
+<meta name="productname" content="Standards MT">
+<meta name="productrelease" content="November 2018">
+<meta name="subproductname" content="Category 1 - Customer Payments and Cheques">
+<meta name="subproductrelease" content="">
+<meta name="Book.Context" content="MT 101">
+<meta name="Book.Product" content="Category 1 - Customer Payments and Cheques for Standards MT November 2018">
+<meta name="Book.Title" content="Message Reference Guide - Standards Release Guide">
+<meta name="informationtypes" content="Standards">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var contextStr  = "MT 101 Mapping" ;
+// --></script>
+<meta http-equiv="Content-Type" content="text/html; CHARSET=ISO-8859-1">
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var imgCursorOn  = new Image() ;     // the image to show when the cursor is on
+imgCursorOn.src  = 'CURSOR1.GIF';
+var imgCursorOff = new Image() ;     // the image to show when the cursor is off
+imgCursorOff.src = 'CURSOR0.GIF' ;
+function refreshRev() {
+   if (parent!=self && parent.parent != parent.self && parent.parent.frames.length==2 && parent.parent.frames[1]==parent) {
+      if (parent.parent.frames[0].frames.length==0) {
+         if (parent.parent.frames[0].revMax!=null) {
+            parent.parent.frames[0].refreshRevCursor();
+         }
+      }
+      else {
+         if (parent.parent.frames[0].frames.length==2) {
+            if (parent.parent.frames[0].frames[1].revMax!=null) {
+               parent.parent.frames[0].frames[1].refreshRevCursor();
+            }
+         }
+      }
+   }
+}
+// end-of-script --></script>
+<link href="swiftuhb.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/JavaScript" src="uhbdoc.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+var toptitle="Standards - Category 1";
+var linkself="afg.htm";
+var linkparent="";
+var leaf=true;
+var linkleft="aff025.htm";
+var linkup="";
+var linkright="afh.htm";
+var linktop="title.htm";
+
+function onLoadUhbDoc() {
+   resyncUhb();
+   refreshRev(); 
+}
+//-->
+</script>
+</head>
+<body onload="onLoadUhbDoc();" class="BOOK"><div class="noprint"><div class="showhidetoc"><a href="javascript:showHideToc();"><img src="hidetoc.gif" name="showhidetoc" alt="Show/Hide TOC"></a></div></div>
+<span class="noprint"><a name="c0"></a>
+</span>
+<a name="genafg"></a>
+<div class="noprint"><a name="top"></a>
+</div>
+
+
+
+<h2>MT&nbsp;101 Mapping</h2>
+
+
+<p>The following illustrates the mapping of a single-transaction MT 101 onto an equivalent MT 103:
+</p>
+<div class="DIAGRAM">
+<p class="PIMG"><img src="d0010069.gif" alt="D0010069" border="0">
+</p>
+</div>
+
+
+<p>National and Banking practices may differ from the mapping shown above.
+</p>
+<p>Mapping onto an MT 103 core is shown for illustration purposes. A multiple MT 101 could also be mapped onto an MT 102 or onto several MTs 103. Mapping onto an MT 103 STP may require more constraints.
+</p>
+<table class="tblnote" width="90%" border="0">
+<tbody>
+<tr>
+<td class="notehead" valign="TOP"><b><i><img src="cursor0.gif" alt="" name="space" height="10" width="10">Note:</i></b>&nbsp;</td>
+
+<td>
+
+<ul>
+<li>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">Fields 20, 21R, 28D, 51A, 25, 21F and 25A should not be mapped onto the MT 103.
+</p></li>
+
+<li>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">See <b>(a)</b> in the figure above.
+</p>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">If both field 50a Instructing Party (50C or L) and field 50a Ordering Customer (50F, G or H) are present in the MT 101 then, per default, 50a Ordering Customer should be mapped onto the subsequent MT 103.
+</p></li>
+
+<li>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">See <b>(b)</b> in the figure above.
+</p>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">Field 30 of the MT 101 is used to construct subfield 1 of field 32A of the MT 103. Whenever relevant, the Interbank Settlement Date of the MT 103 takes into account the instruction codes present in field 23E of the MT 101 (for example RTGS).
+</p></li>
+
+<li>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">See <b>(c)</b> in the figure above.
+</p>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">As a general rule, field 23E of the MT 101 is mapped to field 23E of the MT 103. However codes CMSW, CMTO, CMZB, NETS and URGP are intended for the receiver of the message and no mapping to the MT 103 is required, except in the case of codes CMSW, CMTO and CMZB where the beneficiary account is not with the receiver of the MT 101. In this case these codes must be mapped to field 70 of the MT 103. Code EQUI is not mapped to a field of the MT103, but its presence in the MT 101 will result in the presence of fields 32A, 33B and 36 in the MT 103.
+</p>
+<p class="itemnote"><b><i><img src="cursor0.gif" alt="" name="space" height="10" width="10">Note:</i></b>&nbsp;
+</p>
+<p class="stem"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Some codes require specific mapping action at the executing institution, for example:
+</p>
+
+<ul>
+<li>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">RTGS mapped from the MT 101 to the MT 103 may require the payment to be executed via an RTGS system or code //RT to be added in field 57a of the MT 103
+</p></li>
+
+<li>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">CHQB in the MT 101 will lead to the issuance of a cheque by the executing institution when fields 56a and 57a are not present or by specified correspondent when fields 56a and/or 57a are present
+</p></li>
+
+<li>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">PHON in the MT 101 should be mapped to PHOB in the MT 103
+</p></li>
+
+</ul>
+</li>
+
+<li>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">See <b>(d)</b> in the figure above.
+</p>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">When present, field 33B of the MT 101 is mapped onto field 33B of the MT 103. If field 33B is not present in the MT 101, field 32B of the MT 101 is mapped onto field 33B of the MT 103. In all other cases, field 32B of the MT 101 is used to build subfields 2 and 3 of field 32A of the MT 103.
+</p>
+<p class="itemnote"><b><i><img src="cursor0.gif" alt="" name="space" height="10" width="10">Note:</i></b>&nbsp;
+</p>
+<p class="stem"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Charges for the processing of the MT 101 are to be accounted for separately and posted to the account mentioned in field 25A of the MT 101, when present. Below charges relate to the processing of the MT 103 only.
+</p>
+
+<ul>
+<li>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">If field 71A of the MT 101 contains SHA, field 32B of the MT 101 is mapped to subfields 2 and 3 of field 32A of the MT 103.
+</p></li>
+
+<li>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">If field 71A of the MT 101 contains OUR and charges are known, charges for the entire transaction are added to field 32B of the MT 101 and mapped in field 32A of the MT 103. In this case, field 71G of the MT 103 may be present.
+</p></li>
+
+<li>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">If field 71A of the MT 101 contains OUR and charges are not known, field 32B of the MT 101 is mapped onto field 32A of the MT 103 and field 71G is not present (in this case, the executing institution will be charged back by the next party(ies) in the transaction chain).
+</p></li>
+
+<li>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">If field 71A contains BEN, charges of the executing bank are deducted from field 32B from the received MT 101. The result is mapped onto field 32A of the MT 103. In this case, charges of the executing bank will be quoted into field 71F of the MT 103.
+</p></li>
+
+</ul>
+</li>
+
+<li>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">See <b>(e)</b> in the figure above.
+</p>
+<p class="stem"><img src="cursor0.gif" alt="" name="space" height="10" width="10">Fields 56a and 57a:
+</p>
+
+<ul>
+<li>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">If both fields 56a and 57a are not present in the MT 101, the MT 101 triggers a book transfer at the executing institution or issuance of a cheque.
+</p></li>
+
+<li>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">If both fields 56a and 57a are present, field 56a maps to the Receiver of the MT 103 and field 57a is mapped in field 57a of the MT 103.
+</p></li>
+
+<li>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">If only field 57a is present in the MT 101, field 57a is mapped onto Receiver of the MT 103.
+</p></li>
+
+</ul>
+</li>
+
+<li>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">See <b>(f)</b> in the figure above.
+</p>
+<p><img src="cursor0.gif" alt="" name="space" height="10" width="10">It is not mandatory to map field 21 of the MT 101 in the MT 103. However, if desired, it should be mapped onto field 70 of the MT 103 as follows: :70:/ROC/value.
+</p></li>
+
+</ul></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="noprint">
+<p class="footer" align="CENTER"><a href="aff025.htm"><img src="pgback.gif" alt="Previous Page"></a>&nbsp;
+<a href="#top"><img src="pgtop.gif" alt="Top Of Page"></a>&nbsp;
+<a href="afh.htm"><img src="pgnext.gif" alt="Next Page"></a> 
+</p>
+</div>
+
+</body>
+</html>
+
